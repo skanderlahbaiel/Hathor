@@ -32,12 +32,21 @@ body {
         "footer";
 }
 
+.nav.scrolled {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(43, 36, 30, 0.5); /* Background color when scrolled */
+    height: 10vh;
+    width: 100vw;
+}
+
 .nav {
+    width: 100vw;
     grid-area: nav;
     top: 0;
     z-index: 100;
-    background-color: green;
-    height: 20vh;
+    height: 10vh;
     transition: 0.33s;
     display: flex;
     flex-direction: row;
@@ -47,7 +56,6 @@ body {
 
 .description {
     grid-area: description;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,11 +69,15 @@ body {
 
 .services {
     grid-area: services;
-    
-    background-color: yellow;
     width: 100%;
     height: 100%;
+    border-top-left-radius:90px;
+    border-top-right-radius: 90px;
+    
+    background-color: rgba(43, 36, 30, 0.96);
     display: grid;
+    justify-items: center;
+    place-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 35vh 65vh;
     grid-template-areas:
@@ -76,33 +88,51 @@ body {
 
 .our-packages {
     grid-area: our-packages;
-    background-color: black;
     width: 100%;
     height: 100%;
+    border-bottom-left-radius:100px;
+    border-bottom-right-radius: 100px;
+    
+    background-color: rgba(43, 36, 30, 0.9);
 }
 
 .booking {
     grid-area: booking;
-    background-color: blue;
     width: 100%;
     height: 100%;}
 
 .footer {
     grid-area: footer;
-    background-color: blueviolet;
     width: 100%;
     height: 100%;
 }
 
-.services-title {
-    grid-area: services-title;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+ h1 {
+    background-image: url("assets/abstract.jpg");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    align-items: center;
+
+}}
+
+
+
+ #our-services {
+    
+    font-size: 600%;
+    text-align: center;
+    margin:0;
+    animation: slide-in 1s ease forwards ;
+    
 }
+
+
 
 .café {
     grid-area: café;
@@ -123,14 +153,7 @@ body {
 
 
 
-.nav.scrolled {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(241, 212, 180, 0.5); /* Background color when scrolled */
-    height: 10vh;
-    width: 100vw;
-}
+
 
 
 .descriptivetext {
@@ -216,19 +239,7 @@ body {
 
 
 
-#your-journey, #our-services {
-    color: #EAE5DE;
-    font-size: 600%;
-    
-    margin:0;
-    animation: slide-in 1s ease forwards ;
-    
-}
 
-#our-services {
-    font-size: 400%;
-    
-}
 
 
 

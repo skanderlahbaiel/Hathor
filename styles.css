@@ -71,10 +71,10 @@ body {
     grid-area: services;
     width: 100%;
     height: 100%;
-    border-top-left-radius:90px;
-    border-top-right-radius: 90px;
+    border-top-left-radius:65px;
+    border-top-right-radius: 65px;
     
-    background-color: rgba(43, 36, 30, 0.96);
+    background-color: rgba(34, 49, 92, 0.98);
     display: grid;
     justify-items: center;
     place-items: center;
@@ -86,6 +86,26 @@ body {
     
 }
 
+.services-title {
+        
+    grid-area: services-title;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+}
+
+.services-title:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1.5px;
+}
+
+
+
+
 .our-packages {
     grid-area: our-packages;
     width: 100%;
@@ -93,7 +113,7 @@ body {
     border-bottom-left-radius:100px;
     border-bottom-right-radius: 100px;
     
-    background-color: rgba(43, 36, 30, 0.9);
+    background-color: rgba(34, 49, 92, 0.98);
 }
 
 .booking {
@@ -111,7 +131,7 @@ body {
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
  h1 {
-    background-image: url("assets/abstract.jpg");
+    background-image: url("assets/Background-text.svg");
     background-size: 110% auto;
     background-position: center;
     color: transparent;
@@ -447,12 +467,11 @@ li:hover {
     }
 
     .services-title {
-        background-color: red;
+        
         grid-area: services-title;
         display: flex;
         flex-direction: column;
         justify-content: center;
-       
         align-items: center;
         height: 100%;
     }

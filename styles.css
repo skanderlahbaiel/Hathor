@@ -14,7 +14,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 0vh 100vh 150vh 100vh 100vh 20vh;
+    grid-template-rows: 0vh 100vh 150vh 100vh 150vh 20vh;
     grid-template-columns: 100%;
     justify-content: center;
     grid-gap: 0vh;
@@ -113,8 +113,31 @@ body {
 
 .booking {
     grid-area: booking;
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 50vh 100vh;
+    grid-template-areas: "booking-top-grid booking-top-grid"
+    "booking-bottom-left-grid container-form";
     width: 100%;
     height: 100%;}
+
+.booking-bottom-left-grid{
+  grid-area: booking-bottom-left-grid;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 6%;
+      height: 100%;
+      width: 100%;
+    }
+
+ .booking-top-grid {
+  grid-area:booking-top-grid ;
+      background-color: yellow;
+      height: 100%;
+      width: 100%;
+    }
 
 .footer {
     grid-area: footer;
@@ -653,7 +676,6 @@ li:hover {
   .ag-courses-item_date {
     font-weight: bold;
     color: #f9b234;
-  
     -webkit-transition: color .5s ease;
     -o-transition: color .5s ease;
     transition: color .5s ease
@@ -731,6 +753,7 @@ li:hover {
   /*Form css*/
 
   .container-form {
+    grid-area: container-form;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -760,7 +783,7 @@ li:hover {
 
 
   .window-form {
-    z-index: 100;
+    z-index: 1;
     color: #EAE5DE;
     
     position: relative;
@@ -777,9 +800,22 @@ li:hover {
     justify-content: space-between;
     border-radius: 20px;
     height: 85%;
-    width: 50%;
+    width: 85%;
     border-radius: 40px;
+    transform: scale(1); /* Set the initial scale to 1 (normal size) */
+  transition: transform 0.5s ease; /* Add a transition for the transform property */
     
+    
+  }
+
+  .window-form:hover {
+   transform: scale(1.09);
+   transition: 2s ease;
+    /*Causes the screen to screenshot*/
+  }
+
+  .window-form:not(:hover) {
+    transition: transform 1s ease 0.2s; /* Transition on normal state */
   }
 
   .overlay-form {
@@ -1028,4 +1064,99 @@ select::-webkit-outer-spin-button {
     width: 100%;
     height: 100%;
   }
+}
+
+
+/* Css for the text to the left of the form*/
+
+#h1-text-form {
+  font-size: clamp(3rem, 7vmin, 8rem);
+  
+  color: hsl(0 0% 98%);
+  line-height: 1.3;
+  
+}
+#h1-text-form, #h1-text-form>* {
+  word-spacing: 0.2em;
+}
+
+.underlined {
+/*   background: red; */
+  position: relative;
+  font-size: 1.4em;
+  font-weight:700;
+}
+
+.underline-mask:after {
+  content: '';
+  position: absolute;
+  font-size: 1.4em;
+  font-weight:700;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(280 80% 50%);
+  /* Use a conic gradient mask to hide and show the bits you want */
+  --spread: 140deg;
+  --start: 290deg;
+  -webkit-mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+          mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+
+.underline-mask-productive:after {
+  content: '';
+  position: absolute;
+  font-size: 1.4em;
+  font-weight:700;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 11px solid #3ecd5e;
+  /* Use a conic gradient mask to hide and show the bits you want */
+  --spread: 140deg;
+  --start: 290deg;
+  -webkit-mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+          mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+
+
+
+.underline-clip:after {
+  content: '';
+  position: absolute;
+  font-size: 1.4em;
+  font-weight:700;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 8px solid #f9b234;
+  /* Use a clip-path to hide and show the bits you want */
+  -webkit-clip-path: polygon(0 0, 50% 50%, 80% 0);
+          clip-path: polygon(0 0, 50% 50%, 80% 0);
+}
+
+.underline-clip-discover:after {
+  content: '';
+  position: absolute;
+  font-size: 1.4em;
+  font-weight:700;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 65%;
+  border: 10px solid #4c49ea;
+  /* Use a clip-path to hide and show the bits you want */
+  -webkit-clip-path: polygon(0 0, 50% 50%, 100% 0);
+          clip-path: polygon(0 0, 50% 50%, 100% 0);
 }

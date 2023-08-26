@@ -8,6 +8,7 @@ html, body {
     
 }
 
+
 body {
     overflow-x: hidden;
 }
@@ -107,8 +108,10 @@ body {
 
 .our-packages {
     grid-area: our-packages;
+   
     width: 100%;
     height: 100%;
+    
 }
 
 .booking {
@@ -1160,3 +1163,258 @@ select::-webkit-outer-spin-button {
   -webkit-clip-path: polygon(0 0, 50% 50%, 100% 0);
           clip-path: polygon(0 0, 50% 50%, 100% 0);
 }
+
+
+
+
+/**************************Cards for packages*************************/
+.cards {
+  
+  font-family: "Spline Sans", sans-serif;
+  line-height: 1.5;
+  display: flex;
+ 
+  align-items: flex-start;
+  
+  justify-content: center;
+  gap: 2.5rem;
+  width: 90%;
+  height: 90%;
+  max-width: 1000px;
+  margin: 10vh auto;
+  
+}
+
+.card {
+  cursor: pointer;
+ 
+  border-radius: 30px;
+  box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+  max-width: 300px;
+  height: 65vh;
+  
+}
+
+
+.information {
+  background-color:#F1E4F3;
+  padding: 1.5rem;
+}
+.information .tag {
+  display: inline-block;
+  background-color: #f1eeff;
+  color: #6558d3;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5em 0.75em;
+  line-height: 1;
+  border-radius: 6px;
+}
+.information .tag + * {
+  margin-top: 1rem;
+}
+.information .title {
+  font-size: 1.5rem;
+  color: #F1E4F3;
+  line-height: 1.25;
+}
+.information .title + * {
+  margin-top: 1rem;
+}
+.information .info {
+  color: #a0a0a0;
+}
+.information .info + * {
+  margin-top: 1.25rem;
+}
+.information .button {
+  font: inherit;
+  line-height: 1;
+  background-color: #fff;
+  border: 2px solid #6558d3;
+  color: #6558d3;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.information .button:hover, .information .button:focus {
+  background-color: #FFEDEC;
+  color: #fff;
+}
+.information .details {
+  display: flex;
+  gap: 1rem;
+}
+.information .details div {
+  padding: 0.75em 1em;
+  background-color: #f1eeff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.125em;
+  flex-basis: 50%;
+}
+.information .details dt {
+  font-size: 0.875rem;
+  color: #a69fd6;
+}
+.information .details dd {
+  color: #6558d3;
+  font-weight: 600;
+  font-size: 1.25rem;
+  
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255,237,236, 0.2);
+  backdrop-filter: blur(26px);
+  color: #a7a0a8;
+  height: 70vh;
+  transition: transform 0.8s ease;
+}
+.plan:hover {
+ transform:  scale(1.15);
+ 
+}
+
+.plan strong {
+  font-weight: 600;
+  color: #F1E4F3;;;
+}
+.plan .inner {
+  
+  
+  padding: 20px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  height: 93%;
+  width: 95%;
+}
+
+
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FBC8BE;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #917072;
+}
+.plan .pricing small {
+  color: #917072;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+.plan .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #bcb5bd;
+}
+.plan .title + * {
+  margin-top: 0.75rem;
+}
+.plan .info + * {
+  margin-top: 1rem;
+  color: #a7a0a8;
+}
+.plan .features {
+  display: flex;
+  flex-direction: column;
+}
+.plan .features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.plan .features li + * {
+  margin-top: 0.75rem;
+}
+.plan .features .icon {
+  background-color: #1FCAC5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+ border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+.plan .features + * {
+  margin-top: 1.25rem;
+}
+.plan button {
+  font: inherit;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #fff;
+ font-weight: 500;
+  font-size: 1.125rem;
+  width: 75%;
+  height: 8vh;
+  border: 0;
+  transition: 1.5s;
+  
+}
+.plan button:hover {
+  background-color: #1fcac5
+  ;
+}
+#plan-week .pricing:hover span {
+  display: none; /* Hide original price on hover */
+}
+
+#plan-week .pricing:hover  small {
+  display: none; /* Hide the "/ day" text on hover */
+}
+
+
+#plan-week .pricing:hover::before {
+  content: "50,5 TD"; /* Replace with new price on hover */
+  display: block; /* Display the new price on hover */
+}
+
+/**************************/
+
+
+#plan-month .pricing:hover span {
+  display: none; /* Hide original price on hover */
+}
+
+#plan-month .pricing:hover  small {
+  display: none; /* Hide the "/ day" text on hover */
+}
+
+
+#plan-month .pricing:hover::before {
+  content: "180 TD"; /* Replace with new price on hover */
+  display: block; /* Display the new price on hover */
+}
+
+
+
+
+

@@ -20,7 +20,7 @@ body {
     justify-content: center;
     grid-gap: 0vh;
     max-width: 100%; 
-    background-image: url("C:/Users/user/Hathor-website/assets/description-background.jpg");
+    background-image: url("assets/description-background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

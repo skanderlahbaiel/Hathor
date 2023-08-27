@@ -15,7 +15,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 0vh 100vh 150vh 100vh 150vh 80vh;
+    grid-template-rows: 0vh 100vh 150vh 150vh 150vh 80vh;
     grid-template-columns: 100%;
     justify-content: center;
     grid-gap: 0vh;
@@ -78,27 +78,27 @@ body {
     flex-direction: column;
     justify-items: center;
     place-items: center;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 35vh 65%;
-    grid-template-areas:
-    "services-title services-title"
-    "coworking-space coworking-space" */
+    
     
 }
 
-.services-title {
-        
-    grid-area: services-title;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transition: 700ms ease;
-    font-variation-settings: "wght" 311;
+.section-title {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 300%;
+  text-align: center;
+  margin:0;
+  animation: slide-in 1s ease forwards ;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
 }
 
-.services-title:hover {
+
+
+ .section-title:hover {
     font-variation-settings: "wght" 582; 
     letter-spacing: 1.5px;
 }
@@ -136,8 +136,8 @@ body {
     }
 
  .booking-top-grid {
-  grid-area:booking-top-grid ;
-      background-color: yellow;
+  
+      grid-area:booking-top-grid ;
       height: 100%;
       width: 100%;
     }
@@ -166,10 +166,7 @@ body {
 
  #our-services {
     
-    font-size: 700%;
-    text-align: center;
-    margin:0;
-    animation: slide-in 1s ease forwards ;
+    
     
 }
 
@@ -225,7 +222,7 @@ body {
     content: '';
       border-radius: 1000px;
       
-      box-shadow: 0 0 60px rgba(234,229,222,0.64);
+      box-shadow: 0 0 60px #3ecd5e;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -238,7 +235,7 @@ body {
         content: '';
         width: 45vw; height: 20vh;
         border-radius: 100%;
-        border: 6px solid #EAE5DE;
+        border: 6px solid #3ecd5e;
         position: absolute;
         z-index: -1;
         top: 50%;
@@ -264,11 +261,34 @@ body {
 #visitus:hover, #visitus:focus  {
     animation: visit-us-anchor 1.5s ease forwards;
     transform: translateY(-6px);
+    background-color: #3ecd5e;
 }
 
 #visitus:focus {
-    background-color: (241, 212, 180, 1)
+    background-color: #3ecd5e
 }
+
+@keyframes visit-us-anchor {
+  from {
+      background-color:rgba(241, 212, 180, 0.2);
+      
+  }
+  to {
+      
+      scale: 1;
+      
+      background-color:#3ecd5e;
+      font-weight: 400;
+      box-shadow: 3px 3px 6px #3ecd5e;
+      font-family: Arial, Helvetica, sans-serif
+      
+      
+  
+  }
+
+
+}
+
 
 
 
@@ -335,7 +355,7 @@ li {
 
 }
 
-a:hover {
+#navlist a:hover {
     
     animation: navbuttons-anchor 0.5s ease forwards;
 }
@@ -412,25 +432,6 @@ li:hover {
 
 }
 
-@keyframes visit-us-anchor {
-    from {
-        background-color:rgba(241, 212, 180, 0.2);
-        
-    }
-    to {
-        
-        scale: 1;
-        
-        background-color:rgba(241, 212, 180, 0.75);
-        font-weight: 400;
-        font-family: Arial, Helvetica, sans-serif
-        
-        
-    
-    }
-
-
-}
 
 @keyframes slide-in {
     from {transform: translateX(-100%)}
@@ -450,162 +451,7 @@ li:hover {
     
 }
 
-@media screen and (max-width: 376px) and (max-height: 668px) {
-    
-    .container {
-        display: grid;
-        grid-template-rows: 75vh 100vh 100vh 100vh  20vh;
-        grid-template-columns: 100%;
-        justify-content: center;
-        grid-gap:0vh;
-        max-width: 100%; 
-        background-image: url("C:/Users/user/Hathor-website/assets/description-background.jpg");
-        background-size: cover;
-        image-rendering: crisp-edges;
-        background-position: center;
-        background-attachment: fixed;
-    }
-    
-    @keyframes slide-in {
-        from {transform: translateX(0);}
-        to{transform: translateX(0);}
-    }
-    
-    @keyframes slide-in-fromleft {
-        from {transform: translateX(0); opacity: 1;}
-        to{transform: translateX(0); opacity: 1;}
-    }
 
-    @keyframes slide-out {
-        from {transform: translateX(0);}
-        to{transform: translateX(0);}
-    }
-
-    .services-title {
-        
-        grid-area: services-title;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    #our-services {
-        font-size: 50px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin-top: 110px;
-    }
-  
-    #your-journey {
-        display: none;
-    }
-
-    .nav {
-        top: 0;
-        z-index: 100;
-        background-color: transparent;
-        height: 13vh;
-        transition: 0.33s;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;    
-    }
-    
-    #navlist {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        }
-    
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color:#F1E4F3;
-        font-size: 17px;
-        font-weight: 500;
-        margin: 12px;
-        }
-
-    .nav.scrolled {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background-color: rgba(241, 212, 180, 0.5); /* Background color when scrolled */
-        height: 10vh;
-        width: 100vw;
-    }
-    
-    .description {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        position: absolute;
-        top: 0px; bottom: 0px; left: 0px; right: 0px;
-        width: 100%;
-        height: 100%;
-        opacity: 1;}
-   
-
-    .descriptivetext {
-        position: relative; /* Set position to absolute */
-        width: calc(100% - 16vw); /* Adjust the width to match .container width */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 45%;
-        z-index: 1;
-        top: 70px;
-        }
-    
-    
-    #visitus {
-        font-size: 15px;
-        font-weight: 700;
-        background-color:rgba(241, 212, 180, 0.6);
-        width: 120px;
-        margin-bottom: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20vh;
-        max-height: 70px;
-        border-radius: 1000px;
-        box-shadow: 3px 3px 6px rgb(204, 199, 192);
-        transition: all 0.3s ease-in-out 0s; 
-    }
-    
-    
-    
-        .welcometext {
-            color: #EAE5DE;
-            font-size: 60px;
-            
-            margin:0;
-            
-            
-        }
-        
-        
-        .welcometext2 {
-            color: #EAE5DE;
-            font-size: 35px;
-            
-            margin:0;
-            
-        }
-        .paragraph-text {
-            color:#F6F4ff;
-            
-            font-size: 15px;
-            
-            
-        }
-}
 
   
 /* The cards css */
@@ -753,7 +599,7 @@ li:hover {
   }
  
 
-  /*Form css*/
+  /*Booking Form css*/
 
   .container-form {
     grid-area: container-form;
@@ -856,6 +702,7 @@ li:hover {
 
   .subtitle {
     text-align: center;
+    
     font-size:30px;
     margin-top: 8vh;
     line-height: 1em;
@@ -883,7 +730,7 @@ input {
     color: rgba(255, 255, 255, 0.65);
     width: 20vw;
  
-}
+}.input-lin
 
 .ghost-round:focus {
   outline: none;
@@ -933,10 +780,10 @@ input {
 
 .ghost-round {
   cursor: pointer;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: #3ecd5e;
+  border: 1px solid #3ecd5e;
   border-radius: 25px;
-  color: rgba(255, 255, 255, 0.65);
+color: #EAE5DE;
   
   font-size: 19px;
   font-size: 1.2rem;
@@ -954,10 +801,12 @@ width: 20%;
 }
 
 .ghost-round:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #3ecd5e;
+  border-color:#3ecd5e ;
   color: #EAE5DE;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+  transform: scale(1.018)
 }
 
 .input-line {
@@ -1185,6 +1034,8 @@ select::-webkit-outer-spin-button {
   
 }
 
+
+
 .card {
   cursor: pointer;
  
@@ -1311,7 +1162,7 @@ select::-webkit-outer-spin-button {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #FBC8BE;
+  background-color: #3ecd5e;
   border-radius: 99em 0 0 99em;
   display: flex;
   align-items: center;
@@ -1335,7 +1186,7 @@ select::-webkit-outer-spin-button {
 }
 .plan .info + * {
   margin-top: 1rem;
-  color: #d2ccd3;
+  color: #FFEDEC;
 }
 .plan .features {
   display: flex;
@@ -1350,12 +1201,12 @@ select::-webkit-outer-spin-button {
   margin-top: 0.75rem;
 }
 .plan .features .icon {
-  background-color: #1FCAC5;
+  background-color: #3ecd5e;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
- border-radius: 50%;
+  color: #FFEDEC;
+  border-radius: 50%;
   width: 20px;
   height: 20px;
 }
@@ -1370,7 +1221,7 @@ select::-webkit-outer-spin-button {
   font: inherit;
   background-color: transparent;
   border-radius: 30px;
-  color: #fff;
+  color: #FFEDEC;
   font-weight: 500;
   font-size: 1.125rem;
   width: 75%;
@@ -1380,8 +1231,7 @@ select::-webkit-outer-spin-button {
   
 }
 .plan button:hover {
-  background-color: #1fcac5
-  ;
+  background-color: #3ecd5e;
 }
 #plan-week .pricing:hover span {
   display: none; /* Hide original price on hover */
@@ -1417,6 +1267,17 @@ select::-webkit-outer-spin-button {
 
 
 /********************Footer********************/
+.footer-row a {
+  font-size: 100%;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.footer-row a:hover {
+  color:#d6d0d0
+  
+}
+
 .logo-copyrights{
   display:flex;
   flex-direction: column;
@@ -1503,12 +1364,12 @@ body {
   background: var(--footer-background);
   align-items: start;
 }
- .footer .content a,  .footer .content p {
+ .footer .content p {
   color: #F5F7FA;
   text-decoration: none;
 }
  .footer .content b {
-  color: white;
+  color: #F5F7FA;
 }
  .footer .content p {
   margin: 0;
@@ -1647,3 +1508,348 @@ border-bottom-color: white;;
 }
 
 
+/**********scrolltotop*********/
+.scroll-to-top-container {
+  position: relative;
+  z-index: 1000;
+  height: 2%;
+
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  height: 30px;
+  
+  padding: 10px 20px;
+  
+  cursor: pointer;
+  display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 376px) and (max-height: 668px) {
+    
+  .container {
+      display: grid;
+      grid-template-rows: 12vh 50vh 230vh 180vh  100vh 100vh;
+      grid-template-columns: 100%;
+      justify-content: center;
+      grid-gap:0vh;
+      max-width: 100%; 
+      background-image: url("C:/Users/user/Hathor-website/assets/description-background.jpg");
+      background-size: cover;
+      image-rendering: crisp-edges;
+      background-position: center;
+      background-attachment: fixed;
+      overflow-x: hidden;
+  }
+
+  .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr 1fr auto;
+    grid-gap: 0;
+    padding: 0;
+    background: var(--footer-background);
+    align-items: start;
+}
+.subscribe-box {
+  background: transparent;
+  text-align: center;
+  display: none;
+}
+ 
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 130%;
+      font-weight: 700;
+      text-align: center;
+      margin-top:1vh;
+      animation: slide-in 1s ease forwards ;
+      transition: 700ms ease;
+      font-variation-settings: "wght" 311;
+    }
+
+    .ag-courses-item_link {
+      display: block;
+      padding: 30px 20px;
+      background-color: rgba(255, 255, 255, 0.06);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      text-decoration: none;
+      font: 1em/1.618 Inter, sans-serif;
+      box-shadow: none;
+      overflow: hidden;
+      border-radius: 40px;
+      position: relative;
+    }
+   
+    .cards {
+      font-family: "Spline Sans", sans-serif;
+      line-height: 1.5;
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      width: 80%;
+      height: 90%;
+      max-width: 1000px;
+      margin:  auto;
+    }
+    
+    
+.plan {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: rgba(255,237,236, 0.15);
+      backdrop-filter: blur(26px);
+      color: #d2ccd3;
+      height: 35vh;
+      width: 35vh;
+     
+    }
+    
+ .plan .title {
+  margin-top: 7vh;
+  font-size: 140%;
+  text-align: center;
+ }  
+ .plan .pricing {
+  
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: #3ecd5e;
+    border-radius: 99em 0 0 99em;
+    display: flex;
+    align-items: center;
+    padding: 0.625em 0.75em;
+    font-weight: 600;
+    color: #917072;
+font-size: 1em;
+ } 
+ 
+.plan .info{
+  display: none;
+  margin-top: 0vh;
+  text-align: center;
+}
+
+.plan .features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  margin-left: -20vw;
+  margin-top: 0vh;
+}
+li {
+  height: 4vh;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.booking-bottom-left-grid{
+  display:none;
+}
+
+.subtitle {
+  text-align: center;
+  
+  font-size:160%;
+  margin-top: 8vh;
+  line-height: 1em;
+  font-weight:500;
+  letter-spacing: 0px;
+  letter-spacing: 0.02rem;
+}
+
+.input-line{
+  font-size: 90%;
+}
+
+.window-form:hover {
+  transform: none;
+  transition: 2s ease;
+   /*Causes the screen to screenshot*/
+ }
+
+ 
+
+#options{
+  font-size: 90%;
+}
+.ghost-round{
+  width: 160%;
+}
+
+.booking {
+  grid-area: booking;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;}
+
+.container-form{
+  position: center;
+  width: 90%;
+  height: 90%;
+  
+  
+}
+  
+  
+  @keyframes slide-in {
+      from {transform: translateX(0);}
+      to{transform: translateX(0);}
+  }
+  
+  @keyframes slide-in-fromleft {
+      from {transform: translateX(0); opacity: 1;}
+      to{transform: translateX(0); opacity: 1;}
+  }
+
+  @keyframes slide-out {
+      from {transform: translateX(0);}
+      to{transform: translateX(0);}
+  }
+
+
+
+  
+
+  
+
+  #your-journey {
+      display: none;
+  }
+
+  .nav {
+      top: 0;
+      z-index: 100;
+      background-color: transparent;
+      height: 13vh;
+      transition: 0.33s;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;    
+  }
+  .nav.scrolled {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    height: 10vh;
+    width: 100vw;
+}
+  
+  #navlist {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      }
+  
+  a {
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color:#F1E4F3;
+      font-size: 17px;
+      font-weight: 500;
+      margin: 12px;
+      }
+
+ 
+  
+  .description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      position: absolute;
+      top: 0px; bottom: 0px; left: 0px; right: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 1;}
+ 
+
+  .descriptivetext {
+      position: relative; /* Set position to absolute */
+      width: calc(100% - 16vw); /* Adjust the width to match .container width */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 45%;
+      z-index: 1;
+      top: 70px;
+      }
+  
+  
+  #visitus {
+      font-size: 15px;
+      font-weight: 700;
+      background-color:rgba(241, 212, 180, 0.6);
+      width: 120px;
+      margin-bottom: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      max-height: 70px;
+      border-radius: 1000px;
+      box-shadow: 3px 3px 6px rgb(204, 199, 192);
+      transition: all 0.3s ease-in-out 0s; 
+  }
+  
+  
+  
+      .welcometext {
+          color: #EAE5DE;
+          font-size: 60px;
+          
+          margin:0;
+          
+          
+      }
+      
+      
+      .welcometext2 {
+          color: #EAE5DE;
+          font-size: 35px;
+          
+          margin:0;
+          
+      }
+      .paragraph-text {
+          color:#F6F4ff;
+          
+          font-size: 15px;
+          
+          
+      }
+      .plan button {
+        display: none;
+        
+      }
+}

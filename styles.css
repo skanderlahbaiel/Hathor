@@ -1610,7 +1610,7 @@ border-bottom-color: white;;
 @media screen and (max-width: 500px) and (max-height:930px) and (min-height:780px){
   .container {
     display: grid;
-    grid-template-rows: 10vh 39vh 164vh 160vh  50vh 0vh;
+    grid-template-rows: 10vh 45vh 164vh 160vh  50vh 0vh;
     grid-template-columns: 100%;
     justify-content: center;
     grid-gap: 0vh;
@@ -1994,7 +1994,7 @@ border-bottom-color: white;;
 @media screen and (max-height: 780px) and (max-width: 500px) and (min-height: 681px)  {
   .container {
     display: grid;
-    grid-template-rows: 10vh 39vh 184vh 160vh  70vh 0vh;
+    grid-template-rows: 10vh 45vh 184vh 160vh  70vh 0vh;
     grid-template-columns: 100%;
     justify-content: center;
     grid-gap: 0vh;
@@ -2377,7 +2377,7 @@ border-bottom-color: white;;
 @media screen and (max-width:400px) and (max-height:680px), (max-width:360px) {
   .container {
     display: grid;
-    grid-template-rows: 10vh 39vh 215vh 160vh  70vh 0vh;
+    grid-template-rows: 10vh 45vh 215vh 160vh  70vh 0vh;
     grid-template-columns: 100%;
     justify-content: center;
     grid-gap: 0vh;

@@ -1,4 +1,5 @@
 const inputFields = document.querySelectorAll('input, textarea, select');
+let isInputFocused = false;
 
 // Add event listeners to focus and blur events of input fields
 inputFields.forEach((inputField) => {
@@ -7,14 +8,24 @@ inputFields.forEach((inputField) => {
 });
 
 function handleInputFocus() {
-    // Store the window height in a variable to prevent resizing inconsistencies
-    const windowHeight = window.innerHeight;
-    document.documentElement.style.height = `${windowHeight}px`;
-  }
+  isInputFocused = true;
+  adjustViewportHeight();
+}
 
 function handleInputBlur() {
-    // Check if the `document.documentElement` exists before trying to set its style to prevent potential errors
-    if (document.documentElement) {
-      document.documentElement.style.height = 'auto';
-    }
+  isInputFocused = false;
+  adjustViewportHeight();
+}
+
+function adjustViewportHeight() {
+  if (isInputFocused) {
+    // Set the viewport height to the window.innerHeight to prevent resizing
+    document.documentElement.style.height = `${window.innerHeight}px`;
+  } else {
+    // Reset the viewport height to 'auto' to allow normal resizing
+    document.documentElement.style.height = 'auto';
   }
+}
+
+// Listen for window resize events and adjust viewport height accordingly
+window.addEventListener('resize', adjustViewportHeight);

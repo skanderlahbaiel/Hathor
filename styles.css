@@ -1992,6 +1992,7 @@ border-bottom-color: white;;
 }
 /*** Screen sizes similar to Galaxy A50 ****/
 @media screen and (max-height: 780px) and (max-width: 500px) and (min-height: 681px)  {
+  
   .container {
     display: grid;
     grid-template-rows: 10vh 45vh 184vh 160vh  70vh 0vh;
@@ -2756,7 +2757,52 @@ border-bottom-color: white;;
      }
 
 }
+/*** Adjusted css for focused form on tall screens***/
+@media screen and (min-height:380px) {
+  .subtitle.focused {
+    display: contents;
+  }
+  .ghost-round.focused {
+    cursor: pointer;
+    background: #3ecd5e;
+    border: 1px solid #3ecd5e;
+    border-radius: 25px;
+    color: #EAE5DE;
+    font-size: 10%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+}
+/*** Adjusted css for focused form on short screens***/
+@media screen and (max-height:380px){
+  .subtitle.focused {
+  display: none;
+  }
+  .ghost-round.focused {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 25px;
+    color: #EAE5DE;
+    font-size: 10%;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2.5em;
+    width: 100%;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.ghost-round.focused:hover {
+ 
+  background: #3ecd5e;
 
+}
+  
+}
 .container.focused {
   display: flex;
   align-items: center;
@@ -2807,15 +2853,9 @@ border-bottom-color: white;;
   display: none;
 }
 
-.subtitle.focused {
-  display: none;
-}
 
-.button-container.focused {
-  height: 12%;
-  width: 12%;
-  border-radius: 1000px;
-}
+
+
 .content-form.focused {
   padding-left: 0px;
   padding-right: 0px;

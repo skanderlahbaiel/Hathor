@@ -19,7 +19,8 @@ const toBeModified = [
   ".subtitle",
   ".button-container",
   ".spacing",
-  ".content-form"
+  ".content-form",
+  ".ghost-round"
 ];
 focusClass = "focused";
 

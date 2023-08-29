@@ -2757,7 +2757,7 @@ border-bottom-color: white;;
 
 }
 
-@media screen and (max-height:350px) {
+@media screen and (max-height:395px) {
   .container {
     display: flex;
     align-items: center;

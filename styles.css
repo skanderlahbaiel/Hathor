@@ -2757,3 +2757,56 @@ border-bottom-color: white;;
 
 }
 
+@media screen and (max-height:350px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    
+   
+}
+.nav {
+  display:none
+}
+.description {
+ display:none
+}
+.services {
+  display:none
+}
+.our-packages {
+  display:none
+}
+.booking{
+  height:100%;
+  width: 100%;
+  display: flex;
+}
+#booking-title{
+  display:none;
+}
+.booking-bottom-left-grid{
+  display:none
+}
+.footer {
+  display: none;
+}
+.booking .section-title{
+  display:none
+}
+.booking-top-grid{
+  display: none;
+}
+.subtitle{
+  display: none;
+}
+.button-container{
+  display:none
+}
+.spacing{
+  display:none
+}
+}
+

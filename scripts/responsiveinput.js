@@ -1,9 +1,12 @@
-const inputFields = document.querySelectorAll(
-  "select, input, textarea, #booking-form "
+const bookingForm = document.querySelector("#booking-form");
+const inputFields = bookingForm.querySelectorAll(
+  "select, input, textarea"
 );
-const windowForm = document.querySelectorAll(".window-form")
-console.log(windowForm)
 console.log(inputFields)
+
+const windowForm = document.querySelectorAll(".window-form")
+
+
 const toBeModified = [
   ".container",
   ".nav",
@@ -46,9 +49,7 @@ function unfocusForm() {
 inputFields.forEach((inputField) => {
   windowForm[0].addEventListener("mouseup", focusOnForm)
   inputField.addEventListener("focus", focusOnForm);
-  console.log(inputField)
+  
   inputField.addEventListener("blur", unfocusForm);
 });
 
-console.log(`window inner height: ${window.innerHeight}`)
-console.log(`window inner width: ${window.innerWidth}`)

@@ -12,6 +12,9 @@
     <meta name="copyright" content="skanderlahbaiel">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="icon" href="assets\logo.png" type="image/x-icon">
+    <link rel="alternate" hreflang="en" href="en.txt">
+    <link rel="alternate" hreflang="fr" href="fr.txt">
+
 
 
 </head>
@@ -24,27 +27,39 @@
             <div class="nav">
                 <img id="nav-logo" src="assets\hathor-logo.svg" alt="logo image">
                 <ul id="navlist">
-                    <li><a href="#our-packages">Packages</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#booking-form"> Booking</a></li>
+                    <li><a href="#our-packages" data-translate="packages">Packages</a></li>
+                    <li><a href="#services" data-translate="services">Services</a></li>
+                    <li><a href="#booking-form" data-translate="booking">Booking</a></li>
                 </ul>
+                <section id="language-section">
+
+                    <label for="language-select" >
+                        <input id="language-select-fr" type="radio" name="g6"
+                            value="fr">🇫🇷 </label>
+                    <label for="language-select" >
+                        <input id="language-select-en" type="radio" name="g6"
+                            value="en">🇺🇸 </label>
+                </section>
+
             </div>
 
 
             <div class="description">
                 <div class="descriptivetext">
-                    <h1 class="welcometext">Hathor<h2 class="welcometext2">Coworking space & Café</h1>
-                    <p class="paragraph-text"> Unleash Your Potential</p>
-
+                    <h1 class="welcometext" data-translate="greeting">Hathor</h1>
+                    <h2 class="welcometext2" data-translate="welcome">Coworking space & Café</h2>
+                    <p class="paragraph-text" data-translate="unleash">Unleash Your Potential</p>
                 </div>
-                <a id="visitus" href="#">Address</a>
+                <a id="visitus" href="#" data-translate="address">Address</a>
+               
+               
             </div>
 
 
-            <div id="services" class="services">
 
+            <div id="services" class="services">
                 <div class="section-title">
-                    <h1 id="our-services">Explore Our Offerings</h1>
+                    <h1 id="our-services" data-translate="explore-offerings">Explore Our Offerings</h1>
                 </div>
                 <div class="coworking-space">
                     <!--The cards-->
@@ -53,74 +68,52 @@
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="versatile-solutions">
                                         Versatile Workspace Solutions
                                     </div>
-
-
                                 </a>
                             </div>
-
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="networking-events">
                                         Networking Events
                                     </div>
-
                                 </a>
                             </div>
-
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="meeting-rooms">
                                         Meeting and Conference Rooms
                                     </div>
-
-
                                 </a>
                             </div>
-
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="access">
                                         24/7 Access
                                     </div>
-
-
                                 </a>
                             </div>
-
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="tech-support">
                                         Tech Support
                                     </div>
-
-
                                 </a>
                             </div>
-
                             <div class="ag-courses_item">
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
-
-                                    <div class="ag-courses-item_title">
+                                    <div class="ag-courses-item_title" data-translate="member-benefits">
                                         Member Benefits
                                     </div>
                                 </a>
                             </div>
-                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -131,24 +124,21 @@
             <div id="our-packages" class="our-packages">
                 <!--Section title-->
                 <div class="section-title">
-                    <h1 id="our-packages-title">Explore Membership Packages</h1>
+                    <h1 id="our-packages-title" data-translate="explore-packages">Explore Membership Packages</h1>
                 </div>
-            
+
                 <!--Packages cards-->
-
                 <div class="cards">
-
                     <article id="plan-day" class="plan [ card ]">
                         <div id="inner-day" class="inner">
-
                             <span id="pricing-day" class="pricing">
                                 <span>
                                     10 TD <small>/ day</small>
                                 </span>
                             </span>
-                            <h2 id="title-day" class="title">Flexible Day Pass</h2>
-                            <p id="info-day" class="info">Experience a productive day at Hathor Coworking Space and
-                                Café.</p>
+                            <h2 id="title-day" class="title" data-translate="day-pass">Flexible Day Pass</h2>
+                            <p id="info-day" class="info" data-translate="day-pass-description">Experience a productive
+                                day at Hathor Coworking Space and Café.</p>
                             <ul id="features-day" class="features">
                                 <li id="li-day">
                                     <span class="icon">
@@ -159,7 +149,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span><strong>1 full day</strong> of access </span>
+                                    <span data-translate="day-pass-1-day"><strong>1 full day</strong> of access</span>
                                 </li>
                                 <li id="li-wifi-day">
                                     <span class="icon">
@@ -170,7 +160,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span><strong>Fiber optic</strong> wifi</span>
+                                    <span data-translate="day-pass-wifi"><strong>Fiber optic</strong> wifi</span>
                                 </li>
                                 <li id="li-coffee-day">
                                     <span class="icon">
@@ -181,10 +171,10 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span>Freshly brewed coffee</span>
+                                    <span data-translate="day-pass-coffee">Freshly brewed coffee</span>
                                 </li>
                             </ul>
-                            <button id="button-day" class="button">
+                            <button id="button-day" class="button" data-translate="choose-plan">
                                 Choose plan
                             </button>
                         </div>
@@ -198,8 +188,10 @@
                                     6 TD <small>/ day</small>
                                 </span>
                             </span>
-                            <h2 id="title-month" class="title">Month of Excellence</h2>
-                            <p id="info-month" class="info">Elevate your workspace experience with our 1-month
+                            <h2 data-translate="excellence-month" id="title-month" class="title">Month of Excellence
+                            </h2>
+                            <p data-translate="elevate-experience" id="info-month" class="info">Elevate your workspace
+                                experience with our 1-month
                                 subscription.</p>
                             <ul id="features-month" class="features">
                                 <li id="li-month">
@@ -211,7 +203,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span><strong>1 month</strong> of access </span>
+                                    <span data-translate="month-access"><strong>1 month</strong> of access </span>
                                 </li>
                                 <li id="li-unlimited-month">
                                     <span class="icon">
@@ -222,7 +214,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span>Unlimited <strong>access</strong></span>
+                                    <span data-translate="unlimited-access">Unlimited <strong>access</strong></span>
                                 </li>
                                 <li id="li-rooms-month">
                                     <span class="icon">
@@ -233,10 +225,10 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span>Use of meeting rooms</span>
+                                    <span data-translate="use-rooms">Use of meeting rooms</span>
                                 </li>
                             </ul>
-                            <button id="button-month" class="button">
+                            <button data-translate="choose-plan" id="button-month" class="button">
                                 Choose plan
                             </button>
                         </div>
@@ -250,8 +242,9 @@
                                     7.2 TD<small>/ day</small>
                                 </span>
                             </span>
-                            <h2 id="title-week" class="title">Weeklong Immersion</h2>
-                            <p id="info-week" class="info">Immerse yourself in a week of creativity and productivity.
+                            <h2 data-translate="immersion-week" id="title-week" class="title">Weeklong Immersion</h2>
+                            <p data-translate="immerse-yourself" id="info-week" class="info">Immerse yourself in a week
+                                of creativity and productivity.
                             </p>
                             <ul id="features-week" class="features">
                                 <li id="li-month-week">
@@ -263,7 +256,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span><strong>1 week</strong> of access </span>
+                                    <span data-translate="week-access"><strong>1 week</strong> of access </span>
                                 </li>
                                 <li id="li-unlimited-week">
                                     <span class="icon">
@@ -274,7 +267,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span>Unlimited <strong>access</strong></span>
+                                    <span data-translate="unlimited-access">Unlimited <strong>access</strong></span>
                                 </li>
                                 <li id="li-rooms-week">
                                     <span class="icon">
@@ -285,10 +278,10 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span>Use of meeting rooms</span>
+                                    <span data-translate="use-rooms">Use of meeting rooms</span>
                                 </li>
                             </ul>
-                            <button id="button-week" class="button">
+                            <button data-translate="choose-plan" id="button-week" class="button">
                                 Choose plan
                             </button>
                         </div>
@@ -296,68 +289,78 @@
 
 
                 </div>
-
             </div>
 
 
+
             <div id="booking" class="booking">
-                
+
                 <!--Booking form-->
                 <div id="booking-form" class='container-form'>
                     <div class='window-form'>
                         <div class='overlay-form'></div>
                         <div class='content-form'>
 
-                            <div class='subtitle'>Book your place:</div>
+                            <div class="subtitle" data-translate="book-your-place">Book your place:</div>
                             <div class='input-fields'>
-                                <input type='text' placeholder='Full name' class='input-line full-width'></input>
-                                <input type='email' placeholder='E-mail' class='input-line full-width'></input>
-                                <input type="tel" placeholder='Phone number' class='input-line full-width'></input>
+                                <input type='text' placeholder='Full name' class='input-line full-width'
+                                    data-translate="full-name-placeholder"></input>
+                                <input type='email' placeholder='E-mail' class='input-line full-width'
+                                    data-translate="email-placeholder"></input>
+                                <input type="tel" placeholder='Phone number' class='input-line full-width'
+                                    data-translate="phone-placeholder"></input>
                                 <div class="select-group">
                                     <select placeholder="options" id="options" class="input-line full-width"
-                                        name="optionslist">
+                                        name="optionslist" data-translate="select-options-placeholder">
                                         <option value="" disabled selected>What to book</option>
-                                        <option value="Book a desk">Book a desk</option>
-                                        <option value="Meeting">Meeting</option>
-                                        <option value="Networking event">Networking event</option>
-                                        <option value="Tech support">Tech support</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Book a desk" data-translate="book-desk-option">Book a desk
+                                        </option>
+                                        <option value="Meeting" data-translate="meeting-option">Meeting</option>
+                                        <option value="Networking event" data-translate="networking-event-option">
+                                            Networking event</option>
+                                        <option value="Tech support" data-translate="tech-support-option">Tech support
+                                        </option>
+                                        <option value="Other" data-translate="other-option">Other</option>
                                     </select>
                                 </div>
-
-
-
-                                <input type='text' placeholder='Time' class='input-line full-width'></input>
-
-                                <input type='date' placeholder='Date' class='input-line full-width'></input>
-                                <input type='text' placeholder='Comments' class='input-line full-width'></input>
+                                <input type='text' placeholder='Time' class='input-line full-width'
+                                    data-translate="time-placeholder"></input>
+                                <input type='date' placeholder='Date' class='input-line full-width'
+                                    data-translate="date-placeholder"></input>
+                                <input type='text' placeholder='Comments' class='input-line full-width'
+                                    data-translate="comments-placeholder"></input>
                             </div>
-                            <div class='spacing'>Create your<span class='highlight'>Ticket </span> & receive an e-mail
-                            </div>
-                            <div class="button-container"><button class='ghost-round full-width'>Submit</button></div>
+                            <span data-translate="create-your-ticket">Create your<span class='highlight'>Ticket</span> &
+                                receive
+                                an e-mail</span>
+
+                            <div class="button-container"><button class='ghost-round full-width'
+                                    data-translate="submit-button">Submit</button></div>
                         </div>
                     </div>
                 </div>
+
                 <div class="booking-top-grid">
                     <div class="section-title">
-                        <h1 id="Booking-title">Secure Your Spot</h1>
+                        <h1 id="Booking-title" data-translate="secure-your-spot">Secure Your Spot</h1>
                     </div>
                 </div>
                 <div class="booking-bottom-left-grid">
-                    <h1 id="h1-text-form"><span class="underlined underline-clip-discover">Discover </span>our <br>
+                    <h1 id="h1-text-form">
+                        <span class="underlined underline-clip-discover" data-translate="discover">Discover</span> our
+                        <br>
                         coworking
-                        <span id="word-space" class="underlined underline-clip"> space</span>
+                        <span id="word-space" class="underlined underline-clip" data-translate="space"> space</span>
                         <br>
                         and
-                        <span class="underlined underline-mask">book </span>
+                        <span class="underlined underline-mask" data-translate="book">book</span>
                         for <br>a
-
-                        <span class="underlined underline-mask-productive">productive</span>
+                        <span class="underlined underline-mask-productive" data-translate="productive">productive</span>
                         day
                     </h1>
                 </div>
 
-                
+
 
 
             </div>
@@ -753,73 +756,71 @@
                     <div class="content">
                         <div id="social-media-column" class="social-media">
                             <div class="footer-row">
-                                <h2 class="quick-links-title-footer">Contact</h2>
+                                <h2 class="quick-links-title-footer" data-translate="contact">Contact</h2>
                             </div>
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Connect with us on Facebook">
                                     <img class="footer-svg" src="assets/facebook.svg">
                                 </span>
-                                <a href="#">Connect with us on <strong>Facebook</strong></a>
+                                <a href="#" data-translate="connect-facebook">Connect with us on
+                                    <strong>Facebook</strong></a>
                             </div>
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Follow us on Instagram">
                                     <img class="footer-svg" src="assets/instagram.svg">
                                 </span>
-                                <a href="#">Explore our <strong>Instagram </strong>feed</a>
+                                <a href="#" data-translate="follow-instagram">Explore our <strong>Instagram
+                                    </strong>feed</a>
                             </div>
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Email us at example@example.com">
                                     <img class="footer-svg" src="assets/gmail.svg">
                                 </span>
-                                <a href="#">Contact us via <strong>email</strong></a>
+                                <a href="#" data-translate="contact-email">Contact us via <strong>email</strong></a>
                             </div>
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Find us on Google Maps">
                                     <img class="footer-svg" src="assets/google-maps.svg">
                                 </span>
-                                <a href="#">View our location <strong>on the map</strong></a>
+                                <a href="#" data-translate="find-maps">View our location <strong>on the map</strong></a>
                             </div>
                         </div>
                         <div class="quick-links-footer">
                             <div class="footer-row">
-                                <h2 class="quick-links-title-footer">Links</h2>
+                                <h2 class="quick-links-title-footer" data-translate="quick-links">Links</h2>
                             </div>
                             <div class="footer-row">
-
-                                <a href="#Description"><strong>About us </strong></a>
+                                <a href="#Description" data-translate="about-us"><strong>About us</strong></a>
                             </div>
                             <div class="footer-row">
-
-                                <a href="#services"><strong>Services</strong></a>
+                                <a href="#services" data-translate="services"><strong>Services</strong></a>
                             </div>
                             <div class="footer-row">
-
-                                <a href="#our-packages"><strong>Packages </strong></a>
+                                <a href="#our-packages" data-translate="packages"><strong>Packages</strong></a>
                             </div>
                             <div class="footer-row">
-
-                                <a href="#booking"> <strong>Booking</strong></a>
+                                <a href="#booking" data-translate="booking"><strong>Booking</strong></a>
                             </div>
                         </div>
                         <div class="news-letter">
                             <div class="subscribe-box">
-                                <h2>Subscribe to our mailing list</h2>
+                                <h2 data-translate="subscribe">Subscribe to our mailing list</h2>
                                 <form class="subscribe"><input type="email" placeholder="example@gmail.com"
                                         autocomplete="off" required="required" /><button type="submit">
-                                        <span>Subscribe</span></button></form>
+                                        <span data-translate="subscribe-btn">Subscribe</span></button></form>
                             </div>
                         </div>
 
-
                         <div class="logo-copyrights">
                             <img id="footer-logo" src="assets/hathor-logo.svg" alt="logo">
-                            <p> <strong>Phone number:</strong> +216 99 66 04 55</p>
-                            <p><strong>Email address:</strong> Demni@dalma.com</p>
+                            <p> <strong data-translate="phone">Phone number:</strong> +216 99 66 04 55</p>
+                            <p><strong data-translate="email">Email address:</strong> Demni@dalma.com</p>
                             <p id="copyright">&copy;<span id="current-year">2023</span><small> by
                                     skanderlahbaiel</small>
                             </p>
                         </div>
                     </div>
+
 
 
                     <svg style="position:fixed; top:100vh">
@@ -841,9 +842,9 @@
             </div>
             <div class="scroll-to-top-container">
                 <img id="scrollToTopBtn" class="scroll-to-top" src="assets\up-arrow.svg" alt="up arrow">
-                
-              </div>
-              
+
+            </div>
+
         </div>
     </main>
     <script src="scripts\nav.js"></script>
@@ -851,6 +852,7 @@
     <script src="scripts\smooth-scrolling.js"></script>
     <script src="scripts\scrolltotop.js"></script>
     <script src="scripts\responsiveinput.js"></script>
+    <script src="scripts\translation.js"></script>
 </body>
 
 </html>

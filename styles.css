@@ -2757,56 +2757,66 @@ border-bottom-color: white;;
 
 }
 
-@media screen and (max-height:395px) {
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    
-   
+.container.focused {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
-.nav {
-  display:none
+
+.nav.focused {
+  display: none;
 }
-.description {
- display:none
+
+.description.focused {
+  display: none;
 }
-.services {
-  display:none
+
+.services.focused {
+  display: none;
 }
-.our-packages {
-  display:none
+
+.our-packages.focused {
+  display: none;
 }
-.booking{
-  height:100%;
+
+.booking.focused {
+  height: 100%;
   width: 100%;
   display: flex;
 }
-#booking-title{
-  display:none;
-}
-.booking-bottom-left-grid{
-  display:none
-}
-.footer {
+
+#booking-title.focused {
   display: none;
 }
-.booking .section-title{
-  display:none
-}
-.booking-top-grid{
+
+.booking-bottom-left-grid.focused {
   display: none;
 }
-.subtitle{
+
+.footer.focused {
   display: none;
 }
-.button-container{
-  display:none
+
+.booking .section-title.focused {
+  display: none;
 }
-.spacing{
-  display:none
+
+.booking-top-grid.focused {
+  display: none;
 }
+
+.subtitle.focused {
+  display: none;
 }
+
+.button-container.focused {
+  display: none;
+}
+
+.spacing.focused {
+  display: none;
+}
+
 

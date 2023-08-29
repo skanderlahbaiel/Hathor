@@ -1,18 +1,31 @@
-const inputFields = document.querySelectorAll('select');
-let previousViewportHeight = window.innerHeight;
+const inputFields = document.querySelectorAll('select, input, textarea, .container-form > *');
+const toBeModified = ['.container', '.nav', '.description', '.services', '.our-packages', '.booking', '#booking-title', '.booking-bottom-left-grid', '.footer', '.booking .section-title', '.booking-top-grid', '.subtitle', '.button-container', '.spacing'];
+focusClass='focused'
 
-// Function to handle viewport height adjustments
-function handleViewportHeight() {
-  document.documentElement.style.height = `${previousViewportHeight}px`;
+
+
+
+function focusOnForm() {
+  toBeModified.forEach((selector) => {
+    const elements = Array.from(document.querySelectorAll(selector)); // Convert NodeList to array
+    console.log(`Elements selected to be modified for ${selector}:`, elements);
+    elements.forEach((element) => {
+      element.classList.add(focusClass);
+      console.log(`modified elements ${selector}:`, elements);
+    });
+  });
 }
 
-// Add event listeners to focus and blur events of input fields
+function unfocusForm() {
+  toBeModified.forEach((selector) => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element) => {
+      element.classList.remove(focusClass);
+    });
+  });
+}
+
 inputFields.forEach((inputField) => {
-  inputField.addEventListener('focus', handleViewportHeight);
-  inputField.addEventListener('blur', handleInputBlur);
+  inputField.addEventListener('focus', focusOnForm);
+  inputField.addEventListener('blur', unfocusForm);
 });
-
-function handleInputBlur() {
-  // Set the viewport height back to auto when an input field loses focus
-  document.documentElement.style.height = 'auto';
-}

@@ -2758,7 +2758,7 @@ border-bottom-color: white;;
 
 }
 /*** Adjusted css for focused form on tall screens***/
-@media screen and (min-height:380px) {
+@media screen and (min-height:4100px) {
   .subtitle.focused {
     display: contents;
   }
@@ -2778,7 +2778,7 @@ border-bottom-color: white;;
 }
 }
 /*** Adjusted css for focused form on short screens***/
-@media screen and (max-height:380px){
+@media screen and (max-height:410px){
   .subtitle.focused {
   display: none;
   }

@@ -2812,7 +2812,14 @@ border-bottom-color: white;;
 }
 
 .button-container.focused {
-  display: none;
+  height: 12%;
+  width: 12%;
+  border-radius: 1000px;
+}
+.content-form.focused {
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 100%;
 }
 
 .spacing.focused {

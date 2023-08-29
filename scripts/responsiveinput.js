@@ -19,6 +19,7 @@ const toBeModified = [
   ".subtitle",
   ".button-container",
   ".spacing",
+  ".content-form"
 ];
 focusClass = "focused";
 
@@ -47,3 +48,6 @@ inputFields.forEach((inputField) => {
   console.log(inputField)
   inputField.addEventListener("blur", unfocusForm);
 });
+
+console.log(`window inner height: ${window.innerHeight}`)
+console.log(`window inner width: ${window.innerWidth}`)

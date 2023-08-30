@@ -14,7 +14,7 @@ languageSelectEN.addEventListener("change", () => {
 });
 
 function updateTranslations(selectedLanguage) {
-  const resourcePath = `${selectedLanguage}.json`;
+  const resourcePath = `Languages/${selectedLanguage}.json`;
 
   // Load the translation data from the local resource
   fetch(resourcePath)

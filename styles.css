@@ -2009,6 +2009,7 @@ border-bottom-color: white;;
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
 .our-packages {
   grid-area: our-packages;
   width: 100%;
@@ -2274,16 +2275,17 @@ border-bottom-color: white;;
     }
   
     .nav {
-        top: 0;
-        z-index: 100;
-        background-color: transparent;
-        height: 13vh;
-        transition: 0.33s;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;    
-    }
+      top: 0;
+      z-index: 100;
+      background-color: transparent;
+      height: 13vh;
+      transition: 0.33s;
+      display: grid;
+      grid-template-columns: 15vw 65vw 19vw;
+      grid-template-rows: 13vh;
+      justify-content: space-between;
+  }
+
     .nav.scrolled {
       position: fixed;
       top: 0;
@@ -2294,10 +2296,10 @@ border-bottom-color: white;;
   }
     
     #navlist {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
     
     a {
         font-family: Arial, Helvetica, sans-serif;
@@ -2375,7 +2377,14 @@ border-bottom-color: white;;
   display:none
      }
 
-}
+/*** Language styling ***/
+     #language-section {
+      display: flex;
+      gap: 1vw;
+      flex-direction: column;
+      margin-right: 4vw;
+      top: 0px;
+  }    }
 /*** Older versions of screens iphone7 ***/
 @media screen and (max-width:400px) and (max-height:680px), (max-width:360px) {
   .container {

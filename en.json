@@ -1,6 +1,7 @@
 {
   "packages": "Packages",
   "services": "Services",
+  "our": "our",
   "booking": "Booking",
   "greeting": "Hathor",
   "welcome": "Coworking space & Café",
@@ -57,5 +58,13 @@
   "subscribe": "Subscribe to our mailing list",
   "subscribe-btn": "Subscribe",
   "phone": "Phone number:",
-  "email": "Email address:"
+  "email": "Email address:",
+  "for": "for",
+  "a": "a",
+  "productive": "productive",
+  "day": "day",
+  "and":"and",
+  "booking-subject":"Topic"
+
+
 }

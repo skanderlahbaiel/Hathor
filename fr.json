@@ -45,7 +45,7 @@
   "submit-button": "Envoyer",
   "secure-your-spot": "Sécurisez votre place",
   "discover": "Découvrez",
-  "space": " l'espace",
+  "space": "",
   "book": "réservez",
   "contact": "Contact",
   "connect-facebook": "Connectez-vous avec nous sur Facebook",
@@ -57,5 +57,13 @@
   "subscribe": "Abonnez-vous à notre liste de diffusion",
   "subscribe-btn": "S'abonner",
   "phone": "Numéro de téléphone :",
-  "email": "Adresse e-mail :"
+  "email": "Adresse e-mail :",
+  "our": "notre",
+  "and": "et",
+  "for": "pour",
+  "a": "une journée",
+  "productive": "productive",
+  "day": ".",
+  "coworking":"espace de coworking",
+  "booking-subject":"Sujet"
 }

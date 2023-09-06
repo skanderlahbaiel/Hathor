@@ -35,6 +35,7 @@ const toBeModified = [
   ".spacing",
   ".content-form",
   ".ghost-round",
+  "#quit-form-img"
 ];
 
 const focusClass = "focused";

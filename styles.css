@@ -425,13 +425,17 @@ li {
 
 }
 #quit-form-img {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 90%;
-    margin-top: 1%;
-    height: 5%;
-    width: 7%;
-    cursor: pointer;
+  display: none;
+}
+#quit-form-img.focused {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  margin-left: 76%;
+  margin-top: 4%;
+  height: 5%;
+  width: 7%;
+  cursor: pointer;
 }
 
 #navlist a:hover {
@@ -828,6 +832,7 @@ input {
   background: #3ecd5e;
   border: 1px solid #3ecd5e;
   border-radius: 25px;
+  width: fit-content;
 color: #EAE5DE;
   
   font-size: 19px;
@@ -2915,7 +2920,7 @@ a {
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 2.5em;
-    width: 100%;
+    width: fit-content;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
@@ -2941,7 +2946,7 @@ a {
     font-size: 1rem;
     font-weight: 300;
     line-height: 2.5em;
-    width: 100%;
+    width: fit-content;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }

@@ -1984,15 +1984,15 @@ border-bottom-color: white;;
      
 }
 
-    .nav.scrolled {
-      position: fixed;
-      top: 0;
-      z-index: 100;
-      
-      height: 13vh;
-      width: 100vw;
-      background-color: rgba(62,205,94, 0.85);
-  }
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 11.5vh;
+  top: -2.8%;
+  width: 100vw;
+  background-color: rgba(62,205,94, 0.85);
+}
     
   #navlist {
     display: flex;
@@ -2382,15 +2382,15 @@ display: none;
   justify-content: space-between;
   }
 
-.nav.scrolled {
-  position: fixed;
-  top: 0;
-  z-index: 100;    
-  height: 13vh;
-  width: 100vw;
-  background-color: rgba(62,205,94, 0.85);
-  }
-    
+  .nav.scrolled {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 11.5vh;
+    top: -2.8%;
+    width: 100vw;
+    background-color: rgba(62,205,94, 0.85);
+}
   #navlist {
     display: flex;
     flex-direction: row;
@@ -2510,7 +2510,8 @@ a {
   position: fixed;
   top: 0;
   z-index: 100;
-  height: 13vh;
+  height: 11.5vh;
+  top: -2.8%;
   width: 100vw;
   background-color: rgba(62,205,94, 0.85);
 }
@@ -2802,14 +2803,15 @@ a {
     grid-template-columns: 15vw 70vw 15vw;
      
 }
-    .nav.scrolled {
-      position: fixed;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(62,205,94, 0.85);
-      height: 13vh;
-      width: 100vw;
-  }
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 11.5vh;
+  top: -2.8%;
+  width: 100vw;
+  background-color: rgba(62,205,94, 0.85);
+}
     
   #navlist {
     display: flex;

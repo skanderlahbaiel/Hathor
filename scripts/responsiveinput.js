@@ -1,11 +1,22 @@
-const bookingForm = document.querySelector("#booking-form");
-const inputFields = bookingForm.querySelectorAll(
-  "select, input, textarea"
+let storedScrollY;
+function restoreScrollPosition() {
+  window.scrollTo(0, storedScrollY);
+  console.log(`The y value stored is ${storedScrollY}`);
+  console.log(`Restoring scroll position to ${storedScrollY}`);
+}
+
+const inputFields = document.querySelectorAll(
+  "form select,form input, form textarea"
 );
-console.log(inputFields)
 
-const windowForm = document.querySelectorAll(".window-form")
+const unfocusInputFields = document.querySelectorAll(
+  "select, input, textarea, .button-container button"
+);
 
+const outsideForm = document.querySelector("#quit-form-img");
+
+console.log(`outside of from value: ${outsideForm}`);
+const submitButton = document.querySelector(".button-container button");
 
 const toBeModified = [
   ".container",
@@ -23,16 +34,17 @@ const toBeModified = [
   ".button-container",
   ".spacing",
   ".content-form",
-  ".ghost-round"
+  ".ghost-round",
 ];
-focusClass = "focused";
+
+const focusClass = "focused";
 
 function focusOnForm() {
+  storedScrollY = window.scrollY;
   toBeModified.forEach((selector) => {
-    const elements = Array.from(document.querySelectorAll(selector)); // Convert NodeList to array
+    const elements = Array.from(document.querySelectorAll(selector));
     elements.forEach((element) => {
       element.classList.add(focusClass);
-      
     });
   });
 }
@@ -44,12 +56,17 @@ function unfocusForm() {
       element.classList.remove(focusClass);
     });
   });
+  restoreScrollPosition();
 }
-
-inputFields.forEach((inputField) => {
-  windowForm[0].addEventListener("mouseup", focusOnForm)
-  inputField.addEventListener("focus", focusOnForm);
-  
-  inputField.addEventListener("blur", unfocusForm);
+// Prevent form blur when clicking the submit button
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the form from submitting
+  // Your code to send the request here
 });
 
+inputFields.forEach((inputField) => {
+  inputField.addEventListener("mouseup", focusOnForm);
+  inputField.addEventListener("focus", focusOnForm);
+});
+
+outsideForm.addEventListener("click", unfocusForm);

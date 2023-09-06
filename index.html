@@ -26,17 +26,22 @@
 
             <div class="nav">
                 <img id="nav-logo" src="assets\hathor-logo.svg" alt="logo image">
+                
                 <ul id="navlist">
                     <li><a href="#our-packages" data-translate="packages">Packages</a></li>
                     <li><a href="#services" data-translate="services">Services</a></li>
                     <li><a href="#booking-form" data-translate="booking">Booking</a></li>
                 </ul>
-                <section id="language-section">
 
-                    <label id="fr-label" for="language-select">
-                        <input id="language-select-fr" type="radio" name="g6" value="fr">FR </label>
-                    <label id="en-label" for="language-select">
-                        <input id="language-select-en" type="radio" name="g6" value="en">EN </label>
+                <section id="language-section">
+                    <div class="language-container">
+                    <label id="fr-label" for="language-select">FR</label>
+                    <input id="language-select-fr" type="radio" name="g6" value="fr">
+                </div>
+                <div class="language-container">
+                    <label id="en-label" for="language-select">EN</label>
+                    <input id="language-select-en" type="radio" name="g6" value="en">
+                </div>
                 </section>
 
             </div>
@@ -298,9 +303,16 @@
                     <div class='window-form'>
                         <div class='overlay-form'></div>
                         <div class='content-form'>
-
+                            <img id="quit-form-img" src="assets\exit_form.svg" alt="">
                             <div class="subtitle" data-translate="book-your-place">Book your place:</div>
-                            <div class='input-fields'>
+
+                            <div id="sent-successfuly">Booking request successfuly sent !</div>
+                            <div id="sent-error-500">Something went wrong.</div>
+                            <div id="sent-error-400">You already requested this slot</div>
+
+                            <form class='input-fields' id="booking-form-input" class="container-form"
+                                action="http://127.0.0.1:3000/booking/send-booking" method="post">
+                                <!-- Input fields go here -->
                                 <input type='text' placeholder='Full name' class='input-line full-width'
                                     data-translate="full-name-placeholder"></input>
                                 <input type='email' placeholder='E-mail' class='input-line full-width'
@@ -309,31 +321,36 @@
                                     data-translate="phone-placeholder"></input>
                                 <div class="select-group">
                                     <select placeholder="options" id="options" class="input-line full-width"
-                                        name="optionslist" >
-                                        <option data-translate="booking-subject" value="" disabled selected>What to book</option>
+                                        name="optionslist">
+                                        <option data-translate="booking-subject" value="" disabled selected>What to book
+                                        </option>
                                         <option value="Book a desk" data-translate="book-desk-option">Book a desk
                                         </option>
-                                        <option  value="Meeting" data-translate="meeting-option">Meeting</option>
+                                        <option value="Meeting" data-translate="meeting-option">Meeting</option>
                                         <option value="Networking event" data-translate="networking-event-option">
                                             Networking event</option>
-                                        <option  value="Tech support" data-translate="tech-support-option">Tech support
+                                        <option value="Tech support" data-translate="tech-support-option">Tech support
                                         </option>
-                                        <option  value="Other" data-translate="other-option">Other</option>
+                                        <option value="Other" data-translate="other-option">Other</option>
                                     </select>
                                 </div>
-                                <input type='text' placeholder='Time' class='input-line full-width'
-                                    data-translate="time-placeholder"></input>
-                                <input type='date' placeholder='Date' class='input-line full-width'
+                                <select class="input-line full-width" id="time" name="time"
+                                    data-translate="time-placeholder">
+                                    <option value="matin">Matin</option>
+                                    <option value="soir">Soir</option>
+                                </select>
+
+                                <input type='date' placeholder="yyyy-mm-dd" class='input-line full-width'
                                     data-translate="date-placeholder"></input>
                                 <input type='text' placeholder='Comments' class='input-line full-width'
                                     data-translate="comments-placeholder"></input>
-                            </div>
+                            </form>
                             <span data-translate="create-your-ticket">Create your<span class='highlight'>Ticket</span> &
                                 receive
                                 an e-mail</span>
 
                             <div class="button-container"><button class='ghost-round full-width'
-                                    data-translate="submit-button">Submit</button></div>
+                                    data-translate="submit-button" type="submit">Submit</button></div>
                         </div>
                     </div>
                 </div>
@@ -853,6 +870,7 @@
     <script src="scripts\scrolltotop.js"></script>
     <script src="scripts\responsiveinput.js"></script>
     <script src="scripts\translation.js"></script>
+    <script src="scripts\sendBookingForm.js"></script>
 </body>
 
 </html>

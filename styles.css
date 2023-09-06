@@ -9,11 +9,84 @@ html, body {
    
     
 }
-
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 13vh;
+  width: 100vw;
+  background-color: rgba(62,205,94, 0.85);
+}
 
 
 body {
     overflow-x: hidden;
+}
+#sent-successfuly {
+ display: none;
+}
+
+#booking-form-input-activated {
+  display: none
+}
+
+#sent-successfuly-activated {
+  display: flex;
+  text-align: center;
+  font-weight: 700;
+  background-color: rgba(62,205,94, 0.3);
+ 
+  font-size: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+  border-radius: 30px;
+  margin: 20%;
+}
+
+#sent-error-400 {
+  display: none;
+}
+
+#sent-error-400-activated {
+  display: flex;
+  text-align: center;
+  font-weight: 700;
+  background-color: rgba(204, 41, 54, 0.3); /* 80% opacity */
+   font-size: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+  border-radius: 30px;
+  margin: 20%;
+}
+
+
+
+
+
+
+
+
+#sent-error-500 {
+  display: none;
+}
+
+#sent-error-500-activated {
+  display: flex;
+  text-align: center;
+  font-weight: 700;
+  background-color: rgba(204, 41, 54, 0.3); /* 80% opacity */
+  
+  font-size: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+  border-radius: 30px;
+  margin: 20%;
 }
 
 .container {
@@ -36,14 +109,7 @@ body {
         "footer";
 }
 
-.nav.scrolled {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(43, 36, 30, 0.5); /* Background color when scrolled */
-    height: 10vh;
-    width: 100vw;
-}
+
 
 .nav {
     width: 100vw;
@@ -331,7 +397,7 @@ body {
 #navlist {
     display: flex;
     flex-direction: row;
-    width: 50vw;
+    width: 40vw;
     justify-content: space-between;
     
 }
@@ -357,6 +423,15 @@ li {
     align-items: center;
     border-radius: 18px;
 
+}
+#quit-form-img {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 90%;
+    margin-top: 1%;
+    height: 5%;
+    width: 7%;
+    cursor: pointer;
 }
 
 #navlist a:hover {
@@ -664,9 +739,9 @@ li:hover {
     -ms-flex-flow: column;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     z-index: 5;
-  }
+}
   
   
 
@@ -760,7 +835,7 @@ color: #EAE5DE;
   
   font-weight: 300;
   line-height: 2.5em;
- width:100%;
+ width:fit-content;
   
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -1610,6 +1685,13 @@ border-bottom-color: white;;
 
 /*** Screen sizes similar to iphone12 pro h[896 820] and w<400  ***/
 @media screen and (max-width: 500px) and (max-height:930px) and (min-height:780px){
+  #nav-logo {
+    height: 5vh;
+    width: 8vw;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
   .container {
     display: grid;
     grid-template-rows: 10vh 45vh 164vh 160vh  50vh 0vh;
@@ -1624,6 +1706,8 @@ border-bottom-color: white;;
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
+
 
 .our-packages {
   grid-area: our-packages;
@@ -1888,32 +1972,37 @@ border-bottom-color: white;;
     #your-journey {
         display: none;
     }
-  
-    .nav {
-        top: 0;
-        z-index: 100;
-        background-color: transparent;
-        height: 13vh;
-        transition: 0.33s;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;    
-    }
+
+ .nav {
+    top: 0px;
+    z-index: 100;
+    background-color: transparent;
+    height: 13vh;
+    transition: all 0.33s ease 0s;
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+     
+}
+
     .nav.scrolled {
       position: fixed;
       top: 0;
       z-index: 100;
       
-      height: 10vh;
+      height: 13vh;
       width: 100vw;
+      background-color: rgba(62,205,94, 0.85);
   }
     
-    #navlist {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        }
+  #navlist {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 10%;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
     
     a {
         font-family: Arial, Helvetica, sans-serif;
@@ -1994,7 +2083,12 @@ border-bottom-color: white;;
 }
 /*** Screen sizes similar to Galaxy A50 ****/
 @media screen and (max-height: 780px) and (max-width: 500px) and (min-height: 681px)  {
-  
+  #nav-logo {
+    height: 5vh;
+    width: 8vw;
+    margin-left: 15px;
+    margin-top: 10px;
+}
   .container {
     display: grid;
     grid-template-rows: 10vh 45vh 184vh 160vh  70vh 0vh;
@@ -2019,15 +2113,17 @@ border-bottom-color: white;;
   display: flex;
 }
 
-  .description {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: fit-content;
-    flex-direction: column;
-    position: relative;
-    opacity: 1;
-  }
+  flex-direction: column;
+  position: relative;
+  opacity: 1;
+  top: 10px;
+}
   
   
   
@@ -2270,46 +2366,49 @@ border-bottom-color: white;;
   
     
   
-    #your-journey {
-        display: none;
-    }
+#your-journey {
+display: none;
+}
   
-    .nav {
-      top: 0;
-      z-index: 100;
-      background-color: transparent;
-      height: 13vh;
-      transition: 0.33s;
-      display: grid;
-      grid-template-columns: 15vw 65vw 19vw;
-      grid-template-rows: 13vh;
-      justify-content: space-between;
+.nav {
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+  height: 13vh;
+  transition: 0.33s;
+  display: grid;
+  grid-template-columns: 13vw 74vw 13vw;
+  grid-template-rows: 13vh;
+  justify-content: space-between;
   }
 
-    .nav.scrolled {
-      position: fixed;
-      top: 0;
-      z-index: 100;
-      
-      height: 10vh;
-      width: 100vw;
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;    
+  height: 13vh;
+  width: 100vw;
+  background-color: rgba(62,205,94, 0.85);
   }
     
-    #navlist {
+  #navlist {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 10%;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
-    
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color:#F1E4F3;
-        font-size: 17px;
-        font-weight: 500;
-        margin: 12px;
-        }
-  
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #F1E4F3;
+  font-weight: 500;
+  margin: 12px;
+  font-size: 75%;
+}
+
    
     
     
@@ -2378,15 +2477,43 @@ border-bottom-color: white;;
      }
 
 /*** Language styling ***/
-     #language-section {
-      display: flex;
-      gap: 1vw;
-      flex-direction: column;
-      margin-right: 4vw;
-      top: 0px;
-  }    }
-/*** Older versions of screens iphone7 ***/
+#language-section {
+  display: flex;
+  gap: 1vw;
+  margin-right: 12vw;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+
+  }
+
+
+
+
+
+  /*** Older versions of screens iphone7 ***/
 @media screen and (max-width:400px) and (max-height:680px), (max-width:360px) {
+  #nav-logo {
+    height: 5vh;
+    width: 8vw;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+  #language-section {
+    display: flex;
+    gap: 1vw;
+    margin-right: 2vw;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+.nav.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 13vh;
+  width: 100vw;
+  background-color: rgba(62,205,94, 0.85);
+}
   .container {
     display: grid;
     grid-template-rows: 10vh 45vh 215vh 160vh  70vh 0vh;
@@ -2666,39 +2793,41 @@ border-bottom-color: white;;
     }
   
     .nav {
-        top: 0;
-        z-index: 100;
-        background-color: transparent;
-        height: 13vh;
-        transition: 0.33s;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;    
-    }
+    top: 0px;
+    z-index: 100;
+    background-color: transparent;
+    height: 13vh;
+    transition: all 0.33s ease 0s;
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+     
+}
     .nav.scrolled {
       position: fixed;
       top: 0;
       z-index: 100;
-      
-      height: 10vh;
+      background-color: rgba(62,205,94, 0.85);
+      height: 13vh;
       width: 100vw;
   }
     
-    #navlist {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        }
-    
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        color:#F1E4F3;
-        font-size: 17px;
-        font-weight: 500;
-        margin: 12px;
-        }
+  #navlist {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 10%;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+        a {
+          font-family: Arial, Helvetica, sans-serif;
+          text-decoration: none;
+          color: #F1E4F3;
+          font-size: 75%;
+          font-weight: 700;
+          margin: 6px;
+      }
   
    
     
@@ -2770,6 +2899,7 @@ border-bottom-color: white;;
 }
 /*** Adjusted css for focused form on tall screens***/
 @media screen and (min-height:510px) {
+  
   .subtitle.focused {
     display: contents;
   }
@@ -2790,6 +2920,12 @@ border-bottom-color: white;;
 }
 /*** Adjusted css for focused form on short screens***/
 @media screen and (max-height:510px){
+  #nav-logo {
+    height: 5vh;
+    width: 8vw;
+    margin-left: 15px;
+    margin-top: 10px;
+}
   .subtitle.focused {
   display: none;
   }
@@ -2880,29 +3016,30 @@ border-bottom-color: white;;
 
 
 
-
-
 #language-section {
-  display: flex;
-  
-  gap: 1vw;
-  margin-right: 4vw;
-  top:0px
+    display: flex;
+    gap: 1vw;
+    margin-right: 0vw;
+    flex-direction: column;
+    margin-top: 0vh;
+    width: fit-content;
 }
 
-#language-section input {
+.language-container input {
   display: inline-block;
-  width: 3vh;
-  height: 3vh;
+  width: 2vh;
+  height: 2vh;
   text-align: center;
   line-height: 100%;
   appearance: none;
-  
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.5s, transform 0.6s;
   position: relative;
-  
+}
+
+.language-container {
+  width: fit-content;
 }
 
 #language-section label:hover {
@@ -2932,7 +3069,9 @@ border-bottom-color: white;;
   font-size: 20px;
 }
 
-#language-section label{
+#language-section label {
   text-align: center;
   font-weight: 700;
+  font-size: 60%;
 }
+

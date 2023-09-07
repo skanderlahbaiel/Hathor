@@ -20,39 +20,15 @@ function updateTranslations(selectedLanguage) {
   fetch(resourcePath)
     .then((response) => response.json())
     .then((translation) => {
-      console.log(translation)
       translatableElements.forEach((element) => {
-        const translationKey = element.getAttribute("data-translate");
-        const translationValue = translation[translationKey];
-
-        // Handle placeholders in the translation
-        const placeholders = translationValue.match(/%[sd]/g);
-        let translatedText = translationValue;
-
-        if (placeholders) {
-          placeholders.forEach((placeholder) => {
-            const placeholderValue = getPlaceholderValue(
-              translationKey,
-              placeholder
-            );
-            translatedText = translatedText.replace(
-              placeholder,
-              placeholderValue
-            );
-          });
-        }
-
-        if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
-          element.placeholder = translatedText;
-        } else {
-          element.textContent = translatedText;
-        }
+        translateElement(element, translation);
       });
     })
     .catch((error) => {
       console.error("Error loading translation:", error);
     });
 }
+
 function getPlaceholderValue(translationKey, placeholder) {
   // Check if the translation key exists in the placeholderValues
   if (placeholderValues.hasOwnProperty(translationKey)) {
@@ -66,3 +42,41 @@ function getPlaceholderValue(translationKey, placeholder) {
   // Return a generic placeholder value if no match is found
   return "Placeholder";
 }
+
+function translateElement(element, translation) {
+  const translationKey = element.getAttribute("data-translate");
+  const translationValue = translation[translationKey];
+
+  if (translationValue) {
+    // Handle placeholders in the translation
+    const placeholders = translationValue.match(/%[sd]/g);
+    let translatedText = translationValue;
+
+    if (placeholders) {
+      placeholders.forEach((placeholder) => {
+        const placeholderValue = getPlaceholderValue(
+          translationKey,
+          placeholder
+        );
+        translatedText = translatedText.replace(placeholder, placeholderValue);
+      });
+    }
+
+    if (element.tagName === "A") {
+      // Update the text content for anchor elements
+      element.textContent = translatedText;
+    } else if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      element.placeholder = translatedText;
+    } else {
+      element.textContent = translatedText;
+    }
+  }
+
+  // Recursively handle nested translations
+  const childElements = element.querySelectorAll("[data-translate]");
+  childElements.forEach((childElement) => {
+    translateElement(childElement, translation);
+  });
+}
+
+

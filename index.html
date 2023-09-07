@@ -26,7 +26,7 @@
 
             <div class="nav">
                 <img id="nav-logo" src="assets\hathor-logo.svg" alt="logo image">
-                
+
                 <ul id="navlist">
                     <li><a href="#our-packages" data-translate="packages">Packages</a></li>
                     <li><a href="#services" data-translate="services">Services</a></li>
@@ -35,19 +35,19 @@
 
                 <section id="language-section">
                     <div class="language-container">
-                    <label id="fr-label" for="language-select">FR</label>
-                    <input id="language-select-fr" type="radio" name="g6" value="fr">
-                </div>
-                <div class="language-container">
-                    <label id="en-label" for="language-select">EN</label>
-                    <input id="language-select-en" type="radio" name="g6" value="en">
-                </div>
+                        <label id="fr-label" for="language-select-fr">FR</label>
+                        <input id="language-select-fr" type="radio" name="g6" value="fr">
+                    </div>
+                    <div class="language-container">
+                        <label id="en-label" for="language-select-en">EN</label>
+                        <input id="language-select-en" type="radio" name="g6" value="en">
+                    </div>
                 </section>
 
             </div>
 
 
-            <div class="description">
+            <div id="description" class="description">
                 <div class="descriptivetext">
                     <h1 class="welcometext" data-translate="greeting">Hathor</h1>
                     <h2 class="welcometext2" data-translate="welcome">Coworking space & Café</h2>
@@ -88,7 +88,7 @@
                                 <a href="#" class="ag-courses-item_link">
                                     <div class="ag-courses-item_bg"></div>
                                     <div class="ag-courses-item_title" data-translate="meeting-rooms">
-                                        Meeting and Conference Rooms
+                                        Meeting Desks
                                     </div>
                                 </a>
                             </div>
@@ -152,7 +152,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span data-translate="day-pass-1-day"><strong>1 full day</strong> of access</span>
+                                    <span data-translate="day-pass-1-day"><strong>6 hours</strong> of access</span>
                                 </li>
                                 <li id="li-wifi-day">
                                     <span class="icon">
@@ -206,7 +206,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span data-translate="month-access"><strong>1 month</strong> of access </span>
+                                    <span data-translate="day-pass-coffee">Freshly brewed coffee</span>
                                 </li>
                                 <li id="li-unlimited-month">
                                     <span class="icon">
@@ -228,7 +228,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span data-translate="use-rooms">Use of meeting rooms</span>
+                                    <span data-translate="use-rooms">Meeting table</span>
                                 </li>
                             </ul>
                             <button data-translate="choose-plan" id="button-month" class="button">
@@ -259,7 +259,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span data-translate="week-access"><strong>1 week</strong> of access </span>
+                                    <span data-translate="day-pass-coffee">Freshly brewed coffee</span>
                                 </li>
                                 <li id="li-unlimited-week">
                                     <span class="icon">
@@ -281,7 +281,7 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </span>
-                                    <span data-translate="use-rooms">Use of meeting rooms</span>
+                                    <span data-translate="use-rooms">Meeting table</span>
                                 </li>
                             </ul>
                             <button data-translate="choose-plan" id="button-week" class="button">
@@ -313,15 +313,25 @@
                             <form class='input-fields' id="booking-form-input" class="container-form"
                                 action="http://127.0.0.1:3000/booking/send-booking" method="post">
                                 <!-- Input fields go here -->
-                                <input type='text' placeholder='Full name' class='input-line full-width'
-                                    data-translate="full-name-placeholder"></input>
-                                <input type='email' placeholder='E-mail' class='input-line full-width'
-                                    data-translate="email-placeholder"></input>
-                                <input type="tel" placeholder='Phone number' class='input-line full-width'
-                                    data-translate="phone-placeholder"></input>
+                                <label for="fullname">Full Name</label>
+                                <input type='text' id="fullname" name="fullname" placeholder='Full name'
+                                    class='input-line full-width' data-translate="full-name-placeholder"
+                                    autocomplete="name"></input>
+
+                                <label for="email">E-mail</label>
+                                <input type='email' id="email" name="email" placeholder='E-mail'
+                                    class='input-line full-width' data-translate="email-placeholder"
+                                    autocomplete="email"></input>
+
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder='Phone number'
+                                    class='input-line full-width' data-translate="phone-placeholder"
+                                    autocomplete="tel"></input>
+
+                                <label for="options">Booking Subject</label>
                                 <div class="select-group">
-                                    <select placeholder="options" id="options" class="input-line full-width"
-                                        name="optionslist">
+                                    <select id="options" name="optionslist" class="input-line full-width"
+                                        autocomplete="off">
                                         <option data-translate="booking-subject" value="" disabled selected>What to book
                                         </option>
                                         <option value="Book a desk" data-translate="book-desk-option">Book a desk
@@ -334,21 +344,34 @@
                                         <option value="Other" data-translate="other-option">Other</option>
                                     </select>
                                 </div>
-                                <select class="input-line full-width" id="time" name="time"
-                                    data-translate="time-placeholder">
-                                    <option value="matin">Matin</option>
-                                    <option value="soir">Soir</option>
+
+                                <label for="date">Date</label>
+                                <input type='date' id="date" name="date" placeholder="dd-mm-yyyy"
+                                    class='input-line full-width' data-translate="date-placeholder"
+                                    autocomplete="off"></input>
+
+                                <label for="time" data-translate="time-label">Time</label>
+                                <select id="time" name="time" class="input-line full-width" autocomplete="on">
+                                    <option value="matin" data-translate="morning">Morning</option>
+                                    <option value="soir" data-translate="evening">Evening</option>
                                 </select>
 
-                                <input type='date' placeholder="yyyy-mm-dd" class='input-line full-width'
-                                    data-translate="date-placeholder"></input>
-                                <input type='text' placeholder='Comments' class='input-line full-width'
-                                    data-translate="comments-placeholder"></input>
-                            </form>
-                            <span data-translate="create-your-ticket">Create your<span class='highlight'>Ticket</span> &
-                                receive
-                                an e-mail</span>
 
+
+
+                                <label for="comments">Comments</label>
+                                <input type='text' id="comments" name="comments" placeholder='Comments'
+                                    class='input-line full-width' data-translate="comments-placeholder"
+                                    autocomplete="off"></input>
+                            </form>
+
+
+
+
+                            <div id="booking-notice" class="booking-notice">
+                                <p data-translate="exceptional-hours">Please note: Exceptional hours must be booked at
+                                    least 1 day in advance.</p>
+                            </div>
                             <div class="button-container"><button class='ghost-round full-width'
                                     data-translate="submit-button" type="submit">Submit</button></div>
                         </div>
@@ -382,7 +405,7 @@
 
             </div>
 
-            <div class="footer">
+            <footer class="footer">
                 <div class="footer-element">
                     <div class="bubbles">
                         <div class="bubble"
@@ -779,27 +802,30 @@
                                 <span class="footer-icon" aria-label="Connect with us on Facebook">
                                     <img class="footer-svg" src="assets/facebook.svg">
                                 </span>
-                                <a href="#" data-translate="connect-facebook">Connect with us on
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100094654672777"
+                                    data-translate="connect-facebook">Connect with us on
                                     <strong>Facebook</strong></a>
                             </div>
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Follow us on Instagram">
                                     <img class="footer-svg" src="assets/instagram.svg">
                                 </span>
-                                <a href="#" data-translate="follow-instagram">Explore our <strong>Instagram
+                                <a target="_blank" href="https://www.instagram.com/hathor_coffee/"
+                                    data-translate="follow-instagram">Explore our <strong>Instagram
                                     </strong>feed</a>
                             </div>
-                            <div class="footer-row">
+                            <!-- <div class="footer-row">
                                 <span class="footer-icon" aria-label="Email us at example@example.com">
                                     <img class="footer-svg" src="assets/gmail.svg">
                                 </span>
                                 <a href="#" data-translate="contact-email">Contact us via <strong>email</strong></a>
-                            </div>
+                            </div> -->
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Find us on Google Maps">
                                     <img class="footer-svg" src="assets/google-maps.svg">
                                 </span>
-                                <a href="#" data-translate="find-maps">View our location <strong>on the map</strong></a>
+                                <a target="_blank" href="https://goo.gl/maps/x8VvGRchh9xtnZ477"
+                                    data-translate="find-maps">View our location <strong>on the map</strong></a>
                             </div>
                         </div>
                         <div class="quick-links-footer">
@@ -807,7 +833,7 @@
                                 <h2 class="quick-links-title-footer" data-translate="quick-links">Links</h2>
                             </div>
                             <div class="footer-row">
-                                <a href="#Description" data-translate="about-us"><strong>About us</strong></a>
+                                <a href="#description" data-translate="about-us"><strong>About us</strong></a>
                             </div>
                             <div class="footer-row">
                                 <a href="#services" data-translate="services"><strong>Services</strong></a>
@@ -835,6 +861,10 @@
                             <p id="copyright">&copy;<span id="current-year">2023</span><small> by
                                     skanderlahbaiel</small>
                             </p>
+                            <span data-translate="morning-slot">Morning: 8am-1pm</span>
+                            <span data-translate="evening-slot">Evening:
+                                2pm-9pm</span>
+
                         </div>
                     </div>
 
@@ -856,7 +886,7 @@
                         currentYearElement.textContent = currentYear;
                     </script>
                 </div>
-            </div>
+            </footer>
             <div class="scroll-to-top-container">
                 <img id="scrollToTopBtn" class="scroll-to-top" src="assets\up-arrow.svg" alt="up arrow">
 

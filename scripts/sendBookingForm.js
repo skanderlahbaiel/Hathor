@@ -3,6 +3,50 @@ function addActivatedSuffixToId(elementId) {
   return elementId + "-activated";
 }
 
+function addRedActivatedSuffixToId(elementClassName) {
+  console.log(`adding -activated to ${elementClassName}`);
+  return elementClassName + "-red-activated";
+}
+
+function addGreenActivatedSuffixToId(elementClassName) {
+  console.log(`adding -activated to ${elementClassName}`);
+  return elementClassName + "-green-activated";
+}
+
+function addRedActivatedClassToElementById(elementClassName, timeout) {
+  const modifiedId = addRedActivatedSuffixToId(elementClassName);
+  const elements = document.getElementsByClassName(elementClassName);
+  console.log(`checking if we got an element with class: ${elementClassName}`);
+
+  if (elements.length > 0) {
+    const element = elements[0]; // Access the first element in the collection
+    element.className = modifiedId;
+    console.log(element.className);
+
+    setTimeout(() => {
+      element.className = elementClassName;
+      console.log(element.className);
+    }, timeout);
+  }
+}
+
+
+function addGreenActivatedClassToElementById(elementClassName, timeout) {
+  const modifiedId = addGreenActivatedSuffixToId(elementClassName);
+  const elements = document.getElementsByClassName(elementClassName);
+  console.log(`checking if we got an element with class: ${elementClassName}`);
+
+  if (elements.length > 0) {
+    const element = elements[0]; // Access the first element in the collection
+    element.className = modifiedId;
+    console.log(element.className);
+
+    setTimeout(() => {
+      element.className = elementClassName;
+      console.log(element.className);
+    }, timeout);
+  }
+}
 function addActivatedClassToElementById(elementId, timeout) {
   const modifiedId = addActivatedSuffixToId(elementId);
   const element = document.getElementById(elementId);
@@ -73,17 +117,20 @@ document.addEventListener("DOMContentLoaded", function () {
             );
             console.log(response.status);
             addActivatedClassToElementById("sent-error-400", 3000);
-            addActivatedClassToElementById("booking-form-input", 3000)
+            addActivatedClassToElementById("booking-form-input", 3000);
+            addRedActivatedClassToElementById("window-form", 2000);
             return response.json();
           } else if (response.status === 500) {
             console.log(response.status);
             addActivatedClassToElementById("sent-error-500", 3000);
-            addActivatedClassToElementById("booking-form-input", 3000)
+            addActivatedClassToElementById("booking-form-input", 3000);
+            addRedActivatedClassToElementById("window-form",2000);
             return response.json();
           }
         } else if (response.status === 200) {
           addActivatedClassToElementById("sent-successfuly", 3000);
-          addActivatedClassToElementById("booking-form-input", 3000)
+          addActivatedClassToElementById("booking-form-input", 3000);
+          addGreenActivatedClassToElementById("window-form", 2000);
           console.log(response.status);
           return response.json();
         }

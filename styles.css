@@ -2527,19 +2527,19 @@ a {
   background-color:#3ecd5e;
  
 }
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 45vh 215vh 160vh  70vh 0vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
+.container {
+  display: grid;
+  grid-template-rows: 10vh 45vh 215vh 160vh  130vh 26vh;
+  grid-template-columns: 100%;
+  justify-content: center;
+  grid-gap: 0vh;
+  max-width: 100%;
+  background-image: url("assets/description-background.jpg");
+  background-size: cover;
+  image-rendering: crisp-edges;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 .our-packages {
   grid-area: our-packages;
@@ -2601,15 +2601,15 @@ a {
   min-height: 12rem;
 }
   
-    .footer .content {
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 0.5fr 1fr 0fr 1fr;
-      grid-gap: 0;
-      padding: 0;
-      background: var(--footer-background);
-      align-items: start;
-  }
+.footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0fr 1fr;
+  grid-gap: 0;
+  padding: 0;
+  background: var(--footer-background);
+  align-items: center;
+}
   .footer .content > div > div > * {
     margin-right: 0px;
     margin-block-end: auto;

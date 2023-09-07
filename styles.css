@@ -1585,145 +1585,258 @@ border-bottom-color: white;;
 }
 
 
-/*** For narrow screen ****/
+
+
+
+/* .container {
+  display: grid;
+  grid-template-rows: 10vh 45vh 215vh 160vh 130vh 26vh;
+  grid-template-columns: 100%;
+  justify-content: center;
+  grid-gap: 0vh;
+  max-width: 100%;
+  background-image: url(assets/description-background.jpg);
+  background-size: cover;
+  image-rendering: crisp-edges;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+} */
+.container.focused {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav.focused {
+  display: none;
+}
+
+.description.focused {
+  display: none;
+}
+
+.services.focused {
+  display: none;
+}
+
+.our-packages.focused {
+  display: none;
+}
+
+.booking.focused {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#booking-title.focused {
+  display: none;
+}
+
+.booking-bottom-left-grid.focused {
+  display: none;
+}
+
+.footer.focused {
+  display: none;
+}
+
+.booking .section-title.focused {
+  display: none;
+}
+
+.booking-top-grid.focused {
+  display: none;
+}
 
 
 
 
+.overlay-form {
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 100%;
+}
+.window-form-red-activated {
+  z-index: 1;
+    color: #EAE5DE;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 20px;
+    height: 85%;
+    width: 85%;
+    border-radius: 40px;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+
+    background-color: rgba(204, 41, 54, 0.3);
+}
+.window-form-green-activated {
+  z-index: 1;
+  color: #EAE5DE;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-radius: 20px;
+  height: 85%;
+  width: 85%;
+  border-radius: 40px;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+
+  background-color: rgba(62,205,94, 0.3);
+}
+
+.spacing.focused {
+  display: none;
+}
 
 
-/* @media screen and (max-height: 820px)and (max-width: 630px){
+
+#language-section {
+  display: flex;
+  gap: 0.2vw;
+  margin-right: 2vw;
+  flex-direction: column;
+  margin-top: 0vh;
+  width: fit-content;
+}
+
+.language-container input {
+  display: inline-block;
+  width: 2vh;
+  height: 2vh;
+  text-align: center;
+  line-height: 100%;
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.6s;
+  position: relative;
+}
+
+.language-container {
+  width: fit-content;
+}
+
+#language-section label:hover {
+  
+  transform: scale(1.1);
+}
+#language-section input:hover {
+  transform: scale(1.1);
+}
+#language-section input:checked {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+
+
+
+/* New styles for checked radio label */
+#language-select-fr:checked + label::after,
+#language-select-en:checked + label::after {
+  content: '\2713'; /* Checkmark Unicode character */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 20px;
+}
+
+#language-section label {
+  text-align: center;
+  font-weight: 700;
+  font-size: 60%;
+}
+
+form label {
+  display:none
+}
+#booking-form {
+  width: 100%;
+}
+.reservation-needed{
+  font-size: 51%;
+}
+
+
+
+@media screen and (min-width: 700px){
+  #sent-successfuly-activated {
+    font-size: 150%;
+  }
+  #sent-error-500-activated {
+    font-size: 150%;
+  }
+  
+  #sent-error-400-activated {
+   font-size: 150%;
+    }
+  #language-section label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 85%;
+  }
+  .language-container input {
+  
+    width: 3vh;
+    height: 3vh;
     
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 39vh 180vh 165vh  110vh 2vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
+}
+#language-section{
+  margin-top: 0.1%;
 }
 
-   
-} */
-
-/* @media screen and (max-height: 670px) and (max-width:800px) {
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 39vh 185vh 170vh  110vh 2vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
 }
-} */
-
-/* @media screen and (max-height: 630px){
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 50vh 200vh 170vh  110vh 2vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-}
-} 
-
-
-
-
-
-
-
-
-
-/* @media (max-width: 500px) {
-  .window-form {
-    width: 100%;
-    height: 100%;
-  }
-  .overlay-form {
-    width: 100%;
-    height: 100%;
-  }
-} */
-
-/* @media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
-} */
-/* 
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-} */
-/* @media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .ag-courses-item_link {
-    padding: 22px 40px;
-  }
-  .ag-courses-item_date-box {
-    font-size: 16px;
-  }
-} */
-
-
 
 /*** Screen sizes similar to iphone12 pro h[896 820] and w<400  ***/
-@media screen and (max-width: 500px) and (max-height:930px) and (min-height:780px){
+@media screen and (max-width: 500px) and (max-height:990px) and (min-height:780px){
   #nav-logo {
     height: 5vh;
     width: 8vw;
     margin-left: 15px;
     margin-top: 10px;
 }
-
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 45vh 164vh 160vh  50vh 0vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
+.container {
+  display: grid;
+  grid-template-rows: 10vh 45vh 164vh 160vh  130vh 0vh;
+  grid-template-columns: 100%;
+  justify-content: center;
+  grid-gap: 0vh;
+  max-width: 100%;
+  background-image: url("assets/description-background.jpg");
+  background-size: cover;
+  image-rendering: crisp-edges;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 
@@ -1771,11 +1884,11 @@ border-bottom-color: white;;
   border-radius: 28px;
 }
 .footer {
-    grid-area: footer;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-element {
@@ -2096,26 +2209,26 @@ border-bottom-color: white;;
 
 }
 /*** Screen sizes similar to Galaxy A50 ****/
-@media screen and (max-height: 780px) and (max-width: 500px) and (min-height: 681px)  {
+@media screen and (max-height: 780px) and (max-width: 500px) and (min-height: 640px)  {
   #nav-logo {
     height: 5vh;
     width: 8vw;
     margin-left: 15px;
     margin-top: 10px;
 }
-  .container {
-    display: grid;
-    grid-template-rows: 10vh 45vh 184vh 160vh  70vh 0vh;
-    grid-template-columns: 100%;
-    justify-content: center;
-    grid-gap: 0vh;
-    max-width: 100%;
-    background-image: url("assets/description-background.jpg");
-    background-size: cover;
-    image-rendering: crisp-edges;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
+.container {
+  display: grid;
+  grid-template-rows: 10vh 45vh 215vh 160vh 130vh 26vh;
+  grid-template-columns: 100%;
+  justify-content: center;
+  grid-gap: 0vh;
+  max-width: 100%;
+  background-image: url(assets/description-background.jpg);
+  background-size: cover;
+  image-rendering: crisp-edges;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .our-packages {
@@ -2960,218 +3073,4 @@ a {
 
 }
   
-}
-
-
-.container.focused {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.nav.focused {
-  display: none;
-}
-
-.description.focused {
-  display: none;
-}
-
-.services.focused {
-  display: none;
-}
-
-.our-packages.focused {
-  display: none;
-}
-
-.booking.focused {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-#booking-title.focused {
-  display: none;
-}
-
-.booking-bottom-left-grid.focused {
-  display: none;
-}
-
-.footer.focused {
-  display: none;
-}
-
-.booking .section-title.focused {
-  display: none;
-}
-
-.booking-top-grid.focused {
-  display: none;
-}
-
-
-
-
-.overlay-form {
-  padding-left: 0px;
-  padding-right: 0px;
-  height: 100%;
-}
-.window-form-red-activated {
-  z-index: 1;
-    color: #EAE5DE;
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    overflow: hidden;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    justify-content: space-between;
-    border-radius: 20px;
-    height: 85%;
-    width: 85%;
-    border-radius: 40px;
-    transform: scale(1);
-    transition: transform 0.5s ease;
-
-    background-color: rgba(204, 41, 54, 0.3);
-}
-.window-form-green-activated {
-  z-index: 1;
-  color: #EAE5DE;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  overflow: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  justify-content: space-between;
-  border-radius: 20px;
-  height: 85%;
-  width: 85%;
-  border-radius: 40px;
-  transform: scale(1);
-  transition: transform 0.5s ease;
-
-  background-color: rgba(62,205,94, 0.3);
-}
-
-.spacing.focused {
-  display: none;
-}
-
-
-
-#language-section {
-  display: flex;
-  gap: 0.2vw;
-  margin-right: 2vw;
-  flex-direction: column;
-  margin-top: 0vh;
-  width: fit-content;
-}
-
-.language-container input {
-  display: inline-block;
-  width: 2vh;
-  height: 2vh;
-  text-align: center;
-  line-height: 100%;
-  appearance: none;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.5s, transform 0.6s;
-  position: relative;
-}
-
-.language-container {
-  width: fit-content;
-}
-
-#language-section label:hover {
-  
-  transform: scale(1.1);
-}
-#language-section input:hover {
-  transform: scale(1.1);
-}
-#language-section input:checked {
-  background-color: white;
-  transform: scale(1.1);
-}
-
-
-
-
-/* New styles for checked radio label */
-#language-select-fr:checked + label::after,
-#language-select-en:checked + label::after {
-  content: '\2713'; /* Checkmark Unicode character */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #333;
-  font-size: 20px;
-}
-
-#language-section label {
-  text-align: center;
-  font-weight: 700;
-  font-size: 60%;
-}
-
-
-@media screen and (min-width: 700px){
-  #sent-successfuly-activated {
-    font-size: 150%;
-  }
-  #sent-error-500-activated {
-    font-size: 150%;
-  }
-  
-  #sent-error-400-activated {
-   font-size: 150%;
-    }
-  #language-section label {
-    text-align: center;
-    font-weight: 700;
-    font-size: 85%;
-  }
-  .language-container input {
-  
-    width: 3vh;
-    height: 3vh;
-    
-}
-#language-section{
-  margin-top: 0.1%;
-}
-
-}
-
-form label {
-  display:none
-}
-#booking-form {
-  width: 100%;
-}
-.reservation-needed{
-  font-size: 51%;
 }

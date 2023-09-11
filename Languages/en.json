@@ -39,7 +39,7 @@
   "tech-support-option": "Tech support",
   "other-option": "Other",
   "comments-placeholder": "Comments",
-  "book-your-place": "Book your place:",
+  "book-your-place": "Book your place",
   "morning-slot": "Morning: 8am-1pm",
   "evening-slot":"Evening: 2pm-9pm",
   "submit-button": "Submit",
@@ -71,7 +71,8 @@
   "morning": "Morning", 
   "evening": "Evening",
   "date-label": "Date",  
-  "date-placeholder": "aaaa-mm-jj"
-
-
+  "date-placeholder": "aaaa-mm-jj",
+  "Something-went-wrong": "Oops, an issue occurred. Please check your connection and try again.",
+  "already-requested":"You've already requested this time slot.",
+  "Success": "Booking request successfully submitted!"
 }

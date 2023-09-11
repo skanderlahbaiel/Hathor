@@ -40,7 +40,7 @@
   "date-label": "Date",  
   "date-placeholder": "aaaa-mm-jj",
   "comments-placeholder": "Commentaires",
-  "book-your-place": "Réservez votre place :",
+  "book-your-place": "Réservez votre place",
   "morning-slot": "Matin: 8h-13h",
   "evening-slot":"Soir: 14h-21h",
   "submit-button": "Envoyer",
@@ -72,5 +72,8 @@
   "time-label": "Heure",
   "time-placeholder": "Sélectionnez une heure",
   "morning": "Matin",
-  "evening": "Soir"
+  "evening": "Soir",
+  "Something-went-wrong": "Oups, une erreur s'est produite. Veuillez vérifier votre connexion et réessayer.",
+  "already-requested":"Vous avez déjà demandé ce créneau horaire.",
+  "Success":"Votre demande de réservation a été envoyée avec succès !"
 }

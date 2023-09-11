@@ -131,22 +131,13 @@ document.addEventListener("DOMContentLoaded", function () {
     addActivatedToElementIdNoTimeOut('booking-form-input')
     
     // Get values from the input fields
-    const fullname = document.querySelector(
-      'input[placeholder="Full name"]'
-    ).value;
-    const email = document.querySelector('input[placeholder="E-mail"]').value;
-    const time = document.querySelector("#time").value;
-    const comments = document.querySelector(
-      'input[placeholder="Comments"]'
-    ).value;
-    const subject = document.querySelector("#options").value;
-    const date = document.querySelector(
-      'input[placeholder="yyyy-mm-dd"]'
-    ).value;
-    const phone = document.querySelector(
-      'input[placeholder="Phone number"]'
-    ).value;
-
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const time = document.getElementById("time").value;
+    const comments = document.getElementById("comments").value;
+    const subject = document.getElementById("options").value;
+    const date = document.getElementById("date").value;
+    const phone = document.getElementById("phone").value;
     // Get the current date and time
     const creationDate = new Date().toISOString();
 

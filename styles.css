@@ -1899,7 +1899,7 @@ form label {
     grid-gap: 0vh;
     max-width: 100%;
     background-image: url("assets/description-background.jpg");
-    background-size: cover;
+    background-size: 1;
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;

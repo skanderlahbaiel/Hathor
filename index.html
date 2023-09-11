@@ -13,12 +13,12 @@
     <meta name="keywords" content="coworking, coffee shop, Hathor">
     <meta property="og:title" content="Hathor Coworking Space">
     <meta property="og:description" content="This is the official website of Hathor, a coworking space and coffee shop">
-    <meta property="og:image" content="assets\description-background.jpg">
+    <meta property="og:image" content="assets/description-background.webp">
     <meta property="og:url" content="http://www.hathor.tn">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hathor Coworking Space">
     <meta name="twitter:description" content="This is the official website of Hathor, a coworking space and coffee shop">
-    <meta name="twitter:image" content="assets\description-background.jpg">
+    <meta name="twitter:image" content="assets/description-background.webp">
     <meta name="copyright" content="skanderlahbaiel">
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="icon" href="assets\logo.png" type="image/x-icon">
@@ -345,7 +345,7 @@
                             <div id="sent-error-400" data-translate="already-requested">You already requested this slot.</div>
 
 
-                            <form class='input-fields' id="booking-form-input" class="container-form"
+                            <form class='input-fields' id="booking-form-input" name="coworking-space-booking-form"
                                 action="http://127.0.0.1:3000/booking/send-booking" method="post">
                                 <!-- Input fields go here -->
                                 <label for="fullname">Full Name</label>
@@ -354,7 +354,7 @@
                                     autocomplete="name"></input>
 
                                 <label for="email">E-mail</label>
-                                <input type='email' id="email" name="email" placeholder='E-mail'
+                                <input type='email' id="email"  placeholder='E-mail'
                                     class='input-line full-width' data-translate="email-placeholder"
                                     autocomplete="email"></input>
 

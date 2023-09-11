@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta name="author" content="skanderlahbaiel">
@@ -14,6 +14,10 @@
     <link rel="icon" href="assets\logo.png" type="image/x-icon">
     <link rel="alternate" hreflang="en" href="en.txt">
     <link rel="alternate" hreflang="fr" href="fr.txt">
+    <link rel="icon" href="assets\hathor-logo.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets\hathor-logo.svg">
+    <meta name="theme-color" content="#3ecd5e">
+    <title>Hathor Coworking Space</title>
 
 
 
@@ -53,7 +57,8 @@
                     <h2 class="welcometext2" data-translate="welcome">Coworking space & Café</h2>
                     <p class="paragraph-text" data-translate="unleash">Unleash Your Potential</p>
                 </div>
-                <a id="visitus" href="#" data-translate="address">Address</a>
+                <a id="visitus" target="_blank" href="https://goo.gl/maps/XoEaP4L7NY86mgGdA"
+                    data-translate="address">Address</a>
 
 
             </div>
@@ -306,9 +311,11 @@
                             <img id="quit-form-img" src="assets\exit_form.svg" alt="">
                             <div class="subtitle" data-translate="book-your-place">Book your place:</div>
 
-                            <div id="sent-successfuly">Booking request successfuly sent !</div>
-                            <div id="sent-error-500">Something went wrong.</div>
-                            <div id="sent-error-400">You already requested this slot</div>
+                            <div id="sent-successfuly">Reservation request successfuly sent !</div>
+                            <div id="sent-error-500">Something went wrong, the request took too long. Verify your
+                                connection and try again.</div>
+                            <div id="sent-error-400">You already requested this slot.</div>
+
 
                             <form class='input-fields' id="booking-form-input" class="container-form"
                                 action="http://127.0.0.1:3000/booking/send-booking" method="post">
@@ -334,14 +341,14 @@
                                         autocomplete="off">
                                         <option data-translate="booking-subject" value="" disabled selected>What to book
                                         </option>
-                                        <option value="Book a desk" data-translate="book-desk-option">Book a desk
+                                        <option value="desk" data-translate="book-desk-option">Book a desk
                                         </option>
-                                        <option value="Meeting" data-translate="meeting-option">Meeting</option>
-                                        <option value="Networking event" data-translate="networking-event-option">
+                                        <option value="meeting" data-translate="meeting-option">Meeting</option>
+                                        <option value="networking" data-translate="networking-event-option">
                                             Networking event</option>
-                                        <option value="Tech support" data-translate="tech-support-option">Tech support
+                                        <option value="tech" data-translate="tech-support-option">Tech support
                                         </option>
-                                        <option value="Other" data-translate="other-option">Other</option>
+                                        <option value="other" data-translate="other-option">Other</option>
                                     </select>
                                 </div>
 
@@ -363,9 +370,10 @@
                                 <input type='text' id="comments" name="comments" placeholder='Comments'
                                     class='input-line full-width' data-translate="comments-placeholder"
                                     autocomplete="off"></input>
+
                             </form>
 
-
+                            <div id="loader" class="loader"></div>
 
 
                             <div id="booking-notice" class="booking-notice">
@@ -829,7 +837,7 @@
                             <div class="footer-row">
                                 <span class="footer-icon" aria-label="Find us on Google Maps">
                                     <a target="_blank" href="https://goo.gl/maps/x8VvGRchh9xtnZ477">
-                                        <img class="footer-svg" src="assets/google-maps.svg">
+                                        <img class="footer-svg" src="assets/google-maps.svg" alt="maps-icon">
                                     </a>
                                 </span>
                                 <a target="_blank" href="https://goo.gl/maps/x8VvGRchh9xtnZ477"
